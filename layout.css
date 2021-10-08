@@ -88,13 +88,14 @@ h1 {
 
 /* CSS for Game Introduction page */
 
-
 .game-intro-wrapper {
   border: 3px solid white;
   margin-left: 35px;
   margin-right: 35px;
   margin-top: 50px;
   background-color: black;
+/* toggle the below display none css property when the start button is clicked and it will remove the game intro page*/
+  display: none;
 }
 
 .game-intro-wrapper h2 {
@@ -292,7 +293,7 @@ h1 {
 
 #startbtn:hover {
   transform: rotate(5deg);
-  background-color: #FF1493;
+  background-color: #61fe00;
   color: #000000;
   cursor: pointer;
   border-radius: 50px;
