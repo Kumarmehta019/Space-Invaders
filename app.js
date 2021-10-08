@@ -1,5 +1,7 @@
 function init() {
 
+// creating Grid for key-legend wrapper within the game intro wrapper- I needed to create six divs in width and 2 in height //
+
 
 
 

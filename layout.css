@@ -1,16 +1,13 @@
 body {
-  /*font-family: 'Press Start 2P', cursive;*/
+  font-family: 'Press Start 2P', cursive;
 }
 
 .heading-wrapper{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-}
-
-h1 {
-  font-size: 32px;
+  align-items: flex-start;
 }
 
 audio{
@@ -21,6 +18,40 @@ audio{
 audio::-webkit-media-controls-panel {
   background-color: #24fc02;
 }
+
+h1 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 36px; 
+}
+
+.high-score-wording {
+  font-size: 14px;
+  margin-left: 5px;
+
+}
+
+.life-score-kills-wrapper {
+  margin-left: 35px;
+  display: flex;
+  flex-direction: row;
+}
+
+.life img {
+  margin-left: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 #startbtn {
   padding: 0px;
