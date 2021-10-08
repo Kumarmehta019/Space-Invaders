@@ -26,9 +26,9 @@
     <div><h1>Space Invaders</h1></div>
     <div class="life-score-kills-wrapper">
       <div class="life-wrapper">
-        <div class="life"><img src="Images/Life.png" alt="heart image" width="50" height="35"></div>
-        <div class="life"><img src="Images/Life.png" alt="heart image" width="50" height="35"></div>
-        <div class="life"><img src="Images/Life.png" alt="heart image" width="50" height="35"></div>
+        <div class="three-life"><img src="Images/Life.png" alt="heart image" width="50" height="35"></div>
+        <div class="three-life"><img src="Images/Life.png" alt="heart image" width="50" height="35"></div>
+        <div class="three-life"><img src="Images/Life.png" alt="heart image" width="50" height="35"></div>
       </div>
       <div class="score-wrapper">
       <p class="score-wording">Score:<span id="score-numbers">0</span></p>
@@ -55,46 +55,39 @@
         </p>
       </div>
       <div class="key-legend-wrapper">
-        <div class="alien-greeny-key">
-          <img src="Images/green alien.png" alt="alien greeny image" width="45" height="50">
+        <div class="first-row-key-legend">
+          <div class="alien-greeny">
+            <img src="Images/green alien.png" alt="alien greeny image" width="45" height="50">
+            <p>Kill Greeny and earn 10 points</p>
+          </div>
+          <div class="alien-bluey">
+            <img src="Images/alienblue (1).png" alt="alien bluey image" width="47" height="50">
+            <p>Kill Bluey and earn 20 points</p>
+          </div>
+          <div class="alien-pinky">
+            <img src="Images/purple alien.png" alt="alien pinky image" width="40" height="50">
+            <p>Kill Pinky and earn 50 points</p>
+          </div>
         </div>
-        <div class="alien-greeny-legend">
-          <p>Kill Greeny and earn 10 points</p>
-        </div>
-        <div class="alien-bluey-key">
-          <img src="Images/alienblue (1).png" alt="alien bluey image" width="47" height="50">
-        </div>
-        <div class="alien-bluey-legend">
-          <p>Kill Bluey and earn 20 points</p>
-        </div>
-        <div class="alien-pinky-key">
-          <img src="Images/purple alien.png" alt="alien pinky image" width="40" height="50">
-        </div>
-        <div class="alien-pinky-legend">
-          <p>Kill Pinky and earn 50 points</p>
-        </div>
-        <div class="spaceship-key">
-          <img src="Images/spaceship2.png" alt="spaceship image" width="50" height="50">
-        </div>
-        <div class="spaceship-legend">
-          <p>Spaceship, used to kill Greeny, Bluey & Pinky</p>
-        </div>
-        <div class="life-key">
-          <img src="Images/Life.png" alt="life image" width="85" height="60">
-        </div>
-        <div class="life-legend">
-          <p>Lives, you only have 3 so try not to get killed.</p>
-        </div>
-        <div class="explosion-key">
-          <img src="Images/Explosion.png" alt="spaceship image" width="40" height="40">
-        </div>
-        <div class="explosion-legend">
-          <p>Explosion, when the alien or the spaceship is hit</p>
+        <div class="second-row-key-legend">
+          <div class="spaceship">
+            <img src="Images/spaceship2.png" alt="spaceship image" width="40" height="45">
+            <p>Spaceship, used to kill Greeny, Bluey & Pinky</p>
+          </div>
+          <div class="life">
+            <img src="Images/Life.png" alt="life image" width="55" height="45">
+            <p>Lives, you only have 3 so try not to get killed.</p>
+          </div>
+          <div class="explosion">
+            <img src="Images/Explosion.png" alt="explosion image" width="30" height="30">
+            <p>Explosion, when the alien or the spaceship is hit</p>
+          </div>
         </div>
       </div>
       <div class="start-btn-wrapper">
         <button type="button" id="startbtn">Start</button>
       </div>
+      <p class="author">Designed and created by Kumar Mehta for entertainment purposes only &copy 2021 </p>
 
     </div>
 

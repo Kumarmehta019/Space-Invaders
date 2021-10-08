@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Press Start 2P', cursive;
+  background-color: rgb(0, 0, 0);
 }
 
 .heading-wrapper{
@@ -11,6 +12,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   margin-right: 35px;
+  
 }
 
 audio{
@@ -44,6 +46,8 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
+  
 }
 
 .life-wrapper {
@@ -54,13 +58,39 @@ h1 {
 
 .life img{
   margin-left: -10px;
+  margin-right: 1px;
 }
+
+.score-wording {
+  color: rgb(0, 255, 0);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#score-numbers {
+  color: rgb(0, 255, 0);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.kills-wording {
+  color: rgb(255, 5, 5);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.kills-numbers {
+  color: rgb(255, 5, 5);
+  font-weight: bold;
+  font-size: 18px;
+}
+
 
 /* CSS for Game Introduction page */
 
 
 .game-intro-wrapper {
-  border: 3px solid black;
+  border: 3px solid white;
   margin-left: 35px;
   margin-right: 35px;
   margin-top: 50px;
@@ -75,9 +105,9 @@ h1 {
 }
 
 .game-intro-wrapper h5 {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
-  margin-left: 35px;
+  text-align: center;
   font-size: large;
   color: #24fc02;
 }
@@ -105,38 +135,150 @@ h1 {
 .game-objective-wrapper p {
   font-size: small;
   color: white;
+  text-align: center;
 }
 
 .key-legend-wrapper {
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
-  margin-left: 35px;
-  margin-right: 35px;
-
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.key-legend-grid {
-  width: 100%;
-  height: 100%;
-
-
+.first-row-key-legend {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 5px;
+  margin-left: 30px;
 }
 
-.key-legend-grid div {
-  border: 1px solid lightgrey;
-  flex-grow: 1;
-  height: 50px;
-  width: 100px;
+.alien-greeny {
+  display: flex;
+  flex-direction: row;
+  margin-left: -50px;
+}
+.alien-greeny p {
+  font-size: 10px;
   color: white;
+  width: 200px;
 }
 
+.alien-greeny img {
+  margin-right: 5px;
+}
 
+.alien-bluey {
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  margin-left: 20px;
+}
+
+.alien-bluey p {
+  font-size: 10px;
+  color: white;
+  width: 200px;
+}
+
+.alien-bluey img {
+  margin-right: 5px;
+}
+
+.alien-pinky {
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  margin-left: 20px;
+}
+
+.alien-pinky p {
+  font-size: 10px;
+  color: white;
+  width: 200px;
+}
+
+.alien-pinky img {
+  margin-right: 5px;
+}
+
+.second-row-key-legend {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 5px;
+}
+
+.spaceship {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: -10px;
+}
+
+.spaceship p {
+  font-size: 10px;
+  color: white;
+  width: 200px;
+}
+
+.spaceship img {
+  margin-right: 6px;
+}
+
+.life {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.life p {
+  font-size: 10px;
+  color: white;
+  width: 200px;
+  margin-right: 10px;
+  
+  
+}
+.life img {
+  margin-left: 20px;
+}
+
+.explosion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.explosion p {
+  font-size: 10px;
+  color: white;
+  width: 200px;
+  margin-left: 5px; 
+}
+
+.explosion img {
+  margin-left: 15px;
+  margin-right: 5px;
+  margin-top: 8px;
+  
+}
+
+.start-btn-wrapper {
+  margin: auto;
+  display: block;
+  width: 200px;
+
+}
 
 #startbtn {
   padding: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 180px;
   height: 60px;
   text-align: center;
@@ -156,4 +298,8 @@ h1 {
   border-radius: 50px;
 }
 
-
+.author {
+  color: orange;
+  font-size: 8px;
+  text-align: center;
+}
