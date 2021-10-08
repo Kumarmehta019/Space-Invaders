@@ -1,8 +1,10 @@
 /* CSS for main game page */
-
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: 'Press Start 2P', cursive;
-  background-color: rgb(0, 0, 0);
+  background-color: white;
 }
 
 .heading-wrapper{
@@ -304,3 +306,64 @@ h1 {
   font-size: 8px;
   text-align: center;
 }
+
+
+/* CSS for main game page- not including heading, highscore, lives, music, kills and score*/
+
+.grid-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.grid {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+  height: 80%;
+  width: 80%;
+}
+
+.grid div {
+  border: 1px solid lightgrey;
+  height: 16%;
+  width: 8.5%;
+  color: black;
+  
+}
+
+.grid div.pinky {
+  background-image: url('Images/purple\ alien.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: none;
+  align-content: center;
+}
+
+.grid div.bluey {
+  background-image: url('Images/alienblue\ \(1\).png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: none;
+}
+
+.grid div.greeny {
+  background-image: url('Images/green\ alien.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: none;
+  
+}
+
+.grid div.spaceship {
+  background-image: url('Images/spaceship2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: none;
+}
+
