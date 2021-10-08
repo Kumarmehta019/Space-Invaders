@@ -4,17 +4,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Space Invaders</title>
-  <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="layout.css">
+    <script src="app.js" charset="utf-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <audio id="music"></audio>
+  
   <div class="page-wrapper">
     <div class = "heading-wrapper">
-      <div><button id="game music">Audio</button></div>
+      <audio controls loop>
+        <source src="Sounds/Intergalactic Odyssey.mp3" type="audio/mp3">;
+        Your browser does not support the audio element.
+      </audio>
       <div><h1>Space Invaders</h1></div>
       <div>
-        <p>High Score<span id="high-score">0</span></p>
+        <p>High Score:<span id="high-score">118250</span></p>
       </div>
     </div>
     <div class="life-score-kills-wrapper">
@@ -31,16 +37,16 @@
       </div>
     </div>
 
-    /* Game introduction page/*
+    <!--Game introduction page-->
     <div class=game-intro-wrapper>
       <h2>Welcome to Space Invaders</h2>
       <h5>How to play:</h5>
       <div class="controls-wrapper">
-        <div class="left-key"></div>
+        <div class="left-key"><img src="Images/Left arrow key.png" alt="left arrow key image" width="35" height="35"></div>
         <p>Move left</p>
-        <div class="right-key"></div>
+        <div class="right-key"><img src="Images/right arrow key.png" alt="right arrow key image" width="35" height="35"></div>
         <p>Move right</p>
-        <div class="spacebar-key"></div>
+        <div class="spacebar-key"><img src="Images/Space Bar.png" alt="spacebar key image" width="105" height="50"></div>
         <p>Fire</p>
       </div>
       <div class="game-objective-wrapper">
@@ -51,7 +57,7 @@
         <div class="key-legend-grid"></div>
       </div>
       <div class="start-btn-wrapper">
-        <
+        <button type="button" id="startbtn">Start</button>
       </div>
 
     </div>
