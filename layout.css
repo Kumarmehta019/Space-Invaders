@@ -53,10 +53,21 @@ h1 {
   
 }
 
+@keyframes phasingone {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .life-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  animation-name: phasingone;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 .life img{
@@ -80,12 +91,18 @@ h1 {
   color: rgb(255, 5, 5);
   font-weight: bold;
   font-size: 18px;
+  animation-name: phasingone;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 .kills-numbers {
   color: rgb(255, 5, 5);
   font-weight: bold;
   font-size: 18px;
+  animation-name: phasingone;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 
@@ -96,6 +113,7 @@ h1 {
   margin-left: 35px;
   margin-right: 35px;
   margin-top: 50px;
+  margin-bottom: 25px;
   background-color: black;
 /* toggle the below display none css property when the start button is clicked and it will remove the game intro page*/
   display: none;
@@ -311,6 +329,10 @@ h1 {
 
 /* CSS for main game page- not including heading, highscore, lives, music, kills and score*/
 
+.main-game-wrapper {
+  /* toggle the display to none to hide the main game*/
+  display: flex;
+}
 
 .grid-wrapper {
   max-height: 1000px;
@@ -340,16 +362,6 @@ h1 {
   max-height: 40px;
   border: 1px solid lightgrey;
 }
-
-@keyframes phasingone {
-  from {
-    opacity: 0.7;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 
 .grid div.pinky {
   background-image: url('Images/purple\ alien.png');

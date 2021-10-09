@@ -58,15 +58,15 @@ function init() {
   const spaceshipStartingPosition = 390
 
   // creating a let variable to determine the current location of the spaceship
-  let currentSpaceshipPosition = 0
+  let currentSpaceshipPosition = 390
 
   // creating a const variable to add the red laser beam class
   const redLaserClass = 'rlb'
 
-  // creating a const variable which shows the starting positions of the red laser beam
-  const rlbStartingPosition = spaceshipStartingPosition - 20
+  // creating a const variable to determine the starting location of the red laser beam (rlb)
+  const startingRlbPosition = currentSpaceshipPosition - 21
 
-  // creating a let variable to determine the current location of the red laser beam (rlb)
+  // creating a const variable to determine the starting location of the red laser beam (rlb)
   let currentRlbPosition = 0
 
   // creating a const variable to add the pink laser beam class
@@ -93,6 +93,9 @@ function init() {
   // creating a let variable to determine the current location of the explosion
   let currentExplosionPosition = 0
 
+  //adding const variable called cellWidth to help create function for moving keys. 
+  const cellWidth = 20
+
   // creating a function called createGrid to make the grids based on the width, height and cellCount variables declared above. Then using the individual cell created and creating div and then giving each div an inner text to help with index numbering and finally adding the cell divs to the already existing grid class and pushing each cell into the empty cells array (declared above)
   function createGrid() {
     for (let i = 0; i < cellCount; i++) {
@@ -101,6 +104,7 @@ function init() {
       grid.appendChild(cell)
       cells.push(cell)
     }
+    addSpaceship(spaceshipStartingPosition)
   }
 
   // creating a function to add the pink aliens to the divs called cells, using the forEach method to go through each of the pink alien positions and add the pinky class to the cells variable
@@ -127,13 +131,13 @@ function init() {
 
   // creating a function to add the spaceship to the starting position (spaceshipStartingPosition)
 
-  function addSpaceship() {
-    cells[spaceshipStartingPosition].classList.add(spaceshipClass)
+  function addSpaceship(position) {
+    cells[position].classList.add(spaceshipClass)
   }
 
   // creating a function to add red leaser beam (rlb)
-  function addRlb() {
-    cells[rlbStartingPosition].classList.add(redLaserClass)
+  function addRlb(position) {
+    cells[position].classList.add(redLaserClass)
   }
 
   // creating a function to add pink leaser beam (plb)
@@ -169,20 +173,20 @@ function init() {
 
   // creating a function to remove pink leaser beam (plb)
 
-  function removePlb(position) {
-    cells[position].classList.remove(pinkLaserClass)
+  function removePlb() {
+    cells[currentPlbPosition].classList.remove(pinkLaserClass)
   }
 
   // creating a function to remove blue leaser beam (blb)
 
-  function removeBlb(position) {
-    cells[position].classList.remove(blueLaserClass)
+  function removeBlb() {
+    cells[currentBlbPosition].classList.remove(blueLaserClass)
   }
 
   // creating a function to remove green leaser beam (glb)
 
-  function removeGlb(position) {
-    cells[position].classList.remove(greenLaserClass)
+  function removeGlb() {
+    cells[currentGlbPosition].classList.remove(greenLaserClass)
   }
 
 
@@ -194,9 +198,32 @@ function init() {
 
   // creating a function to remove spaceship (spaceshipone)
   
-  function removeSpaceship() {
-    cells[currentSpaceshipPosition].classList.remove(spaceshipClass)
+  function removeSpaceship(position) {
+    cells[position].classList.remove(spaceshipClass)
   }
+
+  // creating function to move the spaceship left and right, setting left and right boundaries and fire the red laserbeam
+  
+  function leftRightAndFire(event) {
+    const key = event.keyCode
+    removeSpaceship(currentSpaceshipPosition)   
+    if (key === 39 && currentSpaceshipPosition % cellWidth !== cellWidth - 1) {
+      console.log('right')
+      currentSpaceshipPosition++
+    } else if (key === 37 && currentSpaceshipPosition % cellWidth !== 0) {
+      console.log('left')
+      currentSpaceshipPosition--
+    } addSpaceship(currentSpaceshipPosition)
+    // else if (key === 32) {
+    //   console.log('fire')
+    //   addRlb(startingRlbPosition)
+    // } addSpaceship(currentSpaceshipPosition)
+  }
+
+
+  
+  // removeRlb(currentRlbPosition)
+
 
   // creating a function to remove pink alien (pinkyClass)
 
@@ -217,7 +244,7 @@ function init() {
 
 
 
-//  when space bar is pressed the fire() function should trigger and the rlb position should be currentspaceshipposition minus 20.
+  //  when space bar is pressed the fire() function should trigger and the rlb position should be currentspaceshipposition minus 20.
 
 
 
@@ -225,8 +252,8 @@ function init() {
   addPinky()
   addBluey()
   addGreeny()
-  addSpaceship()
-  addRlb()
+  // addSpaceship()
+  addRlb(363)
   addPlb(360)
   addBlb(169)
   addGlb(217)
@@ -237,8 +264,7 @@ function init() {
   removeGlb()
   removeExplosion()
   // removeSpaceship()
-
-
+  window.addEventListener('keydown', leftRightAndFire)
 
 
 
