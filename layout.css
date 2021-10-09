@@ -4,7 +4,7 @@
 }
 body {
   font-family: 'Press Start 2P', cursive;
-  background-color: white;
+  background-color: black;
 }
 
 .heading-wrapper{
@@ -311,9 +311,6 @@ h1 {
 
 /* CSS for main game page- not including heading, highscore, lives, music, kills and score*/
 
-.main-game-wrapper {
-  
-}
 
 .grid-wrapper {
   max-height: 1000px;
@@ -339,38 +336,127 @@ h1 {
 .grid div {
   width: 40px;
   height: 40px;
+  max-width: 40px;
+  max-height: 40px;
   border: 1px solid lightgrey;
-  color: black;
-  
 }
+
+@keyframes phasingone {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 .grid div.pinky {
   background-image: url('Images/purple\ alien.png');
   background-repeat: no-repeat;
   background-size: contain;
-  cursor: none;
-  align-content: center;
+  background-position: center;
+  animation-name: phasingone;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes phasingtwo {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.8;
+  }
 }
 
 .grid div.bluey {
   background-image: url('Images/alienblue\ \(1\).png');
   background-repeat: no-repeat;
   background-size: contain;
-  cursor: none;
+  background-position: center;
+  animation-name: phasingtwo;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
+@keyframes phasingthree {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .grid div.greeny {
   background-image: url('Images/green\ alien.png');
   background-repeat: no-repeat;
   background-size: contain;
-  cursor: none;
-  
+  background-position: center;
+  animation-name: phasingthree;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
 }
 
-.grid div.spaceship {
+.grid div.spaceshipone {
   background-image: url('Images/spaceship2.png');
   background-repeat: no-repeat;
   background-size: contain;
-  cursor: none;
+}
+
+@keyframes phasingfour {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+} 
+
+.grid div.rlb {
+  background-image: url('Images/RedLaserBeam.png');
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: center;
+  animation-name: phasingfour;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+
+.grid div.plb {
+  background-image: url('Images/pinkLaserBeam.png');
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: center;
+  animation-name: phasingfour;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+
+.grid div.blb {
+  background-image: url('Images/blue\ laser\ beam.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+  animation-name: phasingfour;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+
+.grid div.glb {
+  background-image: url('Images/Green\ Laser\ Beam.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  animation-name: phasingfour;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+
+.grid div.explosionone {
+  background-image: url('Images/Explosion.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
 }
 
