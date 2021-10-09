@@ -44,6 +44,7 @@ h1 {
   margin-top: 10px;
   margin-left: 35px;
   margin-right: 35px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -310,29 +311,35 @@ h1 {
 
 /* CSS for main game page- not including heading, highscore, lives, music, kills and score*/
 
+.main-game-wrapper {
+  
+}
+
 .grid-wrapper {
-  height: 100vh;
+  max-height: 1000px;
+  max-width: 800px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: -40px;
+  margin: auto;
+  
 }
 
 .grid {
+  height: 800px;
+  width: 800px;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
   justify-content: center;
-  height: 80%;
-  width: 80%;
+  align-content: flex-start;
 }
 
 .grid div {
+  width: 40px;
+  height: 40px;
   border: 1px solid lightgrey;
-  height: 16%;
-  width: 8.5%;
   color: black;
   
 }
