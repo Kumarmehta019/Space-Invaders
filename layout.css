@@ -418,6 +418,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: 13px;
   background-position: center;
+  background-position-y: bottom;
   animation-name: phasingfour;
   animation-duration: 0.2s;
   animation-iteration-count: infinite;
@@ -458,5 +459,8 @@ h1 {
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: center;
+  animation-name: phasingfour;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
 }
 

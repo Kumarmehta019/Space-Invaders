@@ -19,37 +19,37 @@ function init() {
   const pinkyClass = 'pinky'
 
   // creating a const variable to add all the pink alien positions on the grid
-  const pPosition = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,17,18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+  const pPosition = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,17, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38]
 
   // creating a const variable which shows the starting positions of the pink aliens
   const startingPinkyPosition = pPosition
 
   // creating a let variable to determine the current location of the pink aliens
-  let currentPinkyPosition = []
+  let currentPinkyPosition = 0
 
   // creating a const variable to add the bluey alien class
   const blueyClass = 'bluey'
 
   // creating a const variable to add all the blue alien positions on the grid
-  const bPosition = [40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
+  const bPosition = [40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78]
 
   //creating a variable which shows the starting positions of the blue aliens 
   const startingBlueyPosition = bPosition
 
   // creating a let variable to determine the current location of the blue aliens
-  let currentBlueyPosition = []
+  let currentBlueyPosition = 0
 
   // creating a const variable to add the greeny alien class
   const greenyClass = 'greeny'
 
   //creating a const variable to add all the green alien positions on the grid
-  const gPosition = [80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139]
+  const gPosition = [82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118,  120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139]
 
   //creating a variable which shows the starting positions of the green aliens  
   const startingGreenyPosition = gPosition
 
   // creating a let variable to determine the current locations of the green aliens
-  let currentGreenyPosition = []
+  let currentGreenyPosition = 0
 
   // creating a const variable to add the spaceship one class
   const spaceshipClass = 'spaceshipone'
@@ -62,6 +62,9 @@ function init() {
 
   // creating a const variable to add the red laser beam class
   const redLaserClass = 'rlb'
+
+  // creating a const variable which shows the starting positions of the red laser beam
+  const rlbStartingPosition = spaceshipStartingPosition - 20
 
   // creating a let variable to determine the current location of the red laser beam (rlb)
   let currentRlbPosition = 0
@@ -128,10 +131,9 @@ function init() {
     cells[spaceshipStartingPosition].classList.add(spaceshipClass)
   }
 
-
   // creating a function to add red leaser beam (rlb)
-  function addRlb(position) {
-    cells[position].classList.add(redLaserClass)
+  function addRlb() {
+    cells[rlbStartingPosition].classList.add(redLaserClass)
   }
 
   // creating a function to add pink leaser beam (plb)
@@ -155,12 +157,66 @@ function init() {
 
   // creating a function to add explosion (explosion)
   
-
-  function addExplosion(position) {
-    cells[position].classList.add(explosionClass)
+  function addExplosion() {
+    cells[currentExplosionPosition].classList.add(explosionClass)
   }
 
+
+  // creating a function to remove red leaser beam (rlb)
+  function removeRlb() {
+    cells[currentRlbPosition].classList.remove(redLaserClass)
+  }
+
+  // creating a function to remove pink leaser beam (plb)
+
+  function removePlb(position) {
+    cells[position].classList.remove(pinkLaserClass)
+  }
+
+  // creating a function to remove blue leaser beam (blb)
+
+  function removeBlb(position) {
+    cells[position].classList.remove(blueLaserClass)
+  }
+
+  // creating a function to remove green leaser beam (glb)
+
+  function removeGlb(position) {
+    cells[position].classList.remove(greenLaserClass)
+  }
+
+
+  // creating a function to remove explosion (explosion)
   
+  function removeExplosion() {
+    cells[currentExplosionPosition].classList.remove(explosionClass)
+  }
+
+  // creating a function to remove spaceship (spaceshipone)
+  
+  function removeSpaceship() {
+    cells[currentSpaceshipPosition].classList.remove(spaceshipClass)
+  }
+
+  // creating a function to remove pink alien (pinkyClass)
+
+  // function removeSpaceship(position) {
+  //   cells[position].classList.remove(spaceshipClass)
+  // }
+
+  // creating a function to remove blue alien (blueyClass)
+
+
+
+  // creating a function to remove green alien (greenyClass)
+
+
+
+
+
+
+
+
 //  when space bar is pressed the fire() function should trigger and the rlb position should be currentspaceshipposition minus 20.
 
 
@@ -170,12 +226,17 @@ function init() {
   addBluey()
   addGreeny()
   addSpaceship()
-  addRlb(350)
+  addRlb()
   addPlb(360)
   addBlb(169)
   addGlb(217)
-  addExplosion(206)
-
+  addExplosion()
+  removeRlb()
+  removePlb()
+  removeBlb()
+  removeGlb()
+  removeExplosion()
+  // removeSpaceship()
 
 
 
