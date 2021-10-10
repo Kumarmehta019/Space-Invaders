@@ -37,7 +37,7 @@ function init() {
   const startingBlueyPosition = bPosition
 
   // creating a let variable to determine the current location of the blue aliens
-  let currentBlueyPosition = 0
+  let currentBlueyPosition 
 
   // creating a const variable to add the greeny alien class
   const greenyClass = 'greeny'
@@ -49,7 +49,7 @@ function init() {
   const startingGreenyPosition = gPosition
 
   // creating a let variable to determine the current locations of the green aliens
-  let currentGreenyPosition = 0
+  let currentGreenyPosition 
 
   // creating a const variable to add the spaceship one class
   const spaceshipClass = 'spaceshipone'
@@ -64,22 +64,22 @@ function init() {
   const redLaserClass = 'rlb'
 
   // creating a const variable to determine the starting location of the red laser beam (rlb)
-  const startingRlbPosition = currentSpaceshipPosition - 21
+  const startingRlbPosition = currentSpaceshipPosition - 20
 
   // creating a const variable to determine the starting location of the red laser beam (rlb)
-  let currentRlbPosition = 0
+  let currentRlbPosition 
 
   // creating a const variable to add the pink laser beam class
   const pinkLaserClass = 'plb'
 
   // creating a let variable to determine the current location of the pink laser beam (plb)
-  let currentPlbPosition = 0
+  let currentPlbPosition 
 
   // creating a const variable to add the blue laser beam class
   const blueLaserClass = 'blb'
 
   // creating a let variable to determine the current location of the blue laser beam (blb)
-  let currentBlbPosition = 0
+  let currentBlbPosition 
 
   // creating a const variable to add the green laser beam class
   const greenLaserClass = 'glb'
@@ -93,8 +93,22 @@ function init() {
   // creating a let variable to determine the current location of the explosion
   let currentExplosionPosition = 0
 
-  //adding const variable called cellWidth to help create function for moving keys. 
+  //adding const variable called cellWidth to help create function for moving keys 
   const cellWidth = 20
+
+  // adding const variable for red laser beam location cell width
+  const rlbCellWidth = 21
+
+  // adding three life wrapper with document Queryselector all
+  
+  // const livesWrapper = document.querySelectorAll('.three-life')
+
+  // console.log(livesWrapper)
+
+
+
+
+
 
   // creating a function called createGrid to make the grids based on the width, height and cellCount variables declared above. Then using the individual cell created and creating div and then giving each div an inner text to help with index numbering and finally adding the cell divs to the already existing grid class and pushing each cell into the empty cells array (declared above)
   function createGrid() {
@@ -161,39 +175,39 @@ function init() {
 
   // creating a function to add explosion (explosion)
   
-  function addExplosion() {
-    cells[currentExplosionPosition].classList.add(explosionClass)
+  function addExplosion(position) {
+    cells[position].classList.add(explosionClass)
   }
 
 
   // creating a function to remove red leaser beam (rlb)
-  function removeRlb() {
-    cells[currentRlbPosition].classList.remove(redLaserClass)
+  function removeRlb(position) {
+    cells[position].classList.remove(redLaserClass)
   }
 
   // creating a function to remove pink leaser beam (plb)
 
-  function removePlb() {
-    cells[currentPlbPosition].classList.remove(pinkLaserClass)
+  function removePlb(postion) {
+    cells[position].classList.remove(pinkLaserClass)
   }
 
   // creating a function to remove blue leaser beam (blb)
 
-  function removeBlb() {
-    cells[currentBlbPosition].classList.remove(blueLaserClass)
+  function removeBlb(position) {
+    cells[position].classList.remove(blueLaserClass)
   }
 
   // creating a function to remove green leaser beam (glb)
 
-  function removeGlb() {
-    cells[currentGlbPosition].classList.remove(greenLaserClass)
+  function removeGlb(position) {
+    cells[position].classList.remove(greenLaserClass)
   }
 
 
   // creating a function to remove explosion (explosion)
   
-  function removeExplosion() {
-    cells[currentExplosionPosition].classList.remove(explosionClass)
+  function removeExplosion(position) {
+    cells[position].classList.remove(explosionClass)
   }
 
   // creating a function to remove spaceship (spaceshipone)
@@ -210,14 +224,15 @@ function init() {
     if (key === 39 && currentSpaceshipPosition % cellWidth !== cellWidth - 1) {
       console.log('right')
       currentSpaceshipPosition++
-    } else if (key === 37 && currentSpaceshipPosition % cellWidth !== 0) {
+    } 
+    if (key === 37 && currentSpaceshipPosition % cellWidth !== 0) {
       console.log('left')
       currentSpaceshipPosition--
+    } 
+    if (key === 32 ) {//try adding && with the left and right if above as an || to see if it works) { // && (cells[startingRlbPosition].classList.includes(redLaserClass) !== true)) {
+      console.log('fire')
+      addRlb(startingRlbPosition)
     } addSpaceship(currentSpaceshipPosition)
-    // else if (key === 32) {
-    //   console.log('fire')
-    //   addRlb(startingRlbPosition)
-    // } addSpaceship(currentSpaceshipPosition)
   }
 
 
@@ -247,22 +262,60 @@ function init() {
   //  when space bar is pressed the fire() function should trigger and the rlb position should be currentspaceshipposition minus 20.
 
 
+  // adding explosion sound function 
+
+
+
+
+
+
+  //collision function where alien laser hits spaceship
+  // function alienLaserHitsSpaceship(position) {
+  //   if ((cells[currentSpaceshipPosition].classList.includes(spaceshipClass) && cells[currentSpaceshipPosition].classList.includes(pinkLaserClass)) || ((cells[currentSpaceshipPosition].classList.includes(spaceshipClass) && cells[currentSpaceshipPosition].classList.includes(blueLaserClass))) || ((cells[currentSpaceshipPosition].classList.includes(spaceshipClass) && cells[currentSpaceshipPosition].classList.includes(greenLaserClass)))) {
+  //     let currentExplosionPosition = currentSpaceshipPosition
+  //     removeSpaceship(currentSpaceshipPosition)
+  //     removePlb(currentSpaceshipPosition)
+  //     removeBlb(currentSpaceshipPosition)
+  //     removeGlb(currentSpaceshipPosition)
+  //     addExplosion(currentSpaceshipPosition)
+  //   }
+  //   setTimeout (() => {
+  //     removeExplosion(currentExplosionPosition)
+  //   }, 2000)
+  // }
+  // try without cells and try contains instead of include.
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   createGrid()
   addPinky()
   addBluey()
   addGreeny()
-  // addSpaceship()
-  addRlb(363)
+  // alienLaserHitsSpaceship(390)
+  
+  // addRlb(363)
   addPlb(360)
   addBlb(169)
   addGlb(217)
-  addExplosion()
-  removeRlb()
-  removePlb()
-  removeBlb()
-  removeGlb()
-  removeExplosion()
+  // addExplosion()
+  // removeRlb()
+  // removePlb()
+  // removeBlb()
+  // removeGlb()
+  // removeExplosion()
   // removeSpaceship()
   window.addEventListener('keydown', leftRightAndFire)
 
