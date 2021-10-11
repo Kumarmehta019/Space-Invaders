@@ -117,7 +117,7 @@ h1 {
   margin-bottom: 25px;
   background-color: black;
 /* toggle the below display none css property when the start button is clicked and it will remove the game intro page*/
-  display: ;
+  display: none;
 }
 
 .game-intro-wrapper h2 {
@@ -481,8 +481,8 @@ h1 {
 /* CSS for losing game over page */
 
 .losing-game-over-wrapper {
-  /* toggle the display to show the losing game over page */
-  display: flex;
+  /* toggle the display from flex to none to show the losing game over page */
+  display: none;
   flex-direction: column;
   height: 550px;
   width: 500px;
@@ -539,8 +539,8 @@ h1 {
 /* CSS for winning game over page */
 
 .winning-game-over-wrapper {
-  /* toggle the display to show the winning game over page */
-  display: flex;
+  /* toggle the display from flex to none to show the winning game over page */
+  display: none;
   flex-direction: column;
   height: 550px;
   width: 500px;
