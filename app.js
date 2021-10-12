@@ -1,5 +1,15 @@
 function init() {
 
+  // audio variables
+  const fire = document.querySelector('.fire')
+  const hit = document.querySelector('.hit')
+  const destroyed = document.querySelector('.destroyed')
+  const life = document.querySelector('.life')
+  const lost = document.querySelector('.lost')
+  const win = document.querySelector('.win')
+  
+  
+
   // Grid Variables
   const grid = document.querySelector('.grid')
 
@@ -36,7 +46,7 @@ function init() {
   function createGrid() {
     for (let i = 0; i < cellCount; i++) {
       const cell = document.createElement('div')
-      cell.innerText = i 
+      // cell.innerText = i 
       grid.appendChild(cell)
       cells.push(cell)
     }
@@ -151,8 +161,7 @@ function init() {
     } 
     if (key === 32 ) {
       console.log('fire')
-      // audio.src = './sounds/Laser.mp3'
-      // audio.play()
+      rlbFire()
       addRlb(currentSpaceshipPosition - 20)
       currentRlbPosition = currentSpaceshipPosition - 20
       moveRlb()
@@ -176,6 +185,44 @@ function init() {
   }
 
 
+  //creating function for the fire sound of the red laser beam
+
+  function rlbFire() {
+    fire.src = 'Sounds/Laser.mp3'
+    fire.play()
+  }
+
+  // creating function for the alien hit sound
+  function alienHit() {
+    fire.src = 'Sounds/hit.mp3'
+    fire.play()
+  }
+
+  // creating function for Spaceship Destroyed sound
+  function spaceshipDestroyed() {
+    fire.src = 'Sounds/destroyed.mp3'
+    fire.play()
+  }
+
+  // creating function for life sound
+  function lifeLost() {
+    fire.src = 'Sounds/life.mp3'
+    fire.play()
+  }
+
+
+  // creating function for game over lost sound
+  function gameOverLost() {
+    fire.src = 'Sounds/lost.mp3'
+    fire.play()
+  }
+
+
+  // creating function for game over win sound
+  function gameOverWin() {
+    fire.src = 'Sounds/win.mp3'
+    fire.play()
+  }
 
 
 
