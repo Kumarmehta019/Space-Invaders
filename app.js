@@ -16,7 +16,7 @@ function init() {
   const cells = []
 
   // creating a const variable to add the pinky alien class
-  const pinkyClass = 'pinky'
+  const alienPinkyClass = 'pinky'
 
   // creating a const variable to add all the pink alien positions on the grid
   const pPosition = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38]
@@ -28,7 +28,7 @@ function init() {
   let currentPinkyPosition = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38]
 
   // creating a const variable to add the bluey alien class
-  const blueyClass = 'bluey'
+  const alienBlueyClass = 'bluey'
 
   // creating a const variable to add all the blue alien positions on the grid
   const bPosition = [41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78]
@@ -37,10 +37,10 @@ function init() {
   const startingBlueyPosition = bPosition
 
   // creating a let variable to determine the current location of the blue aliens
-  let currentBlueyPosition = [ 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78]
+  let currentBlueyPosition = [41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78]
 
   // creating a const variable to add the greeny alien class
-  const greenyClass = 'greeny'
+  const alienGreenyClass = 'greeny'
 
   //creating a const variable to add all the green alien positions on the grid
   const gPosition = [81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138]
@@ -88,7 +88,10 @@ function init() {
   const explosionClass = 'explosionone'
 
   // creating a let variable to determine the current location of the explosion
-  let currentExplosionPosition = 0
+  let currentExplosionPosition = 290 
+
+  // creating a const variable to determine the starting location of the explosion
+  const startingExplosionPosition = 290 
 
   //adding const variable called cellWidth to help create function for moving keys 
   const cellWidth = 20
@@ -124,14 +127,14 @@ function init() {
   // creating a function to add the pink aliens to the divs called cells, using the forEach method to go through each of the pink alien positions and add the pinky class to the cells variable
   function addPinky() {
     pPosition.forEach((pink) => {
-      cells[pink].classList.add(pinkyClass)
+      cells[pink].classList.add(alienPinkyClass)
     })
   }
 
   // creating a function to add the blue aliens to the divs called cells, using the forEach method to go through each of the blue alien positions and add the bluey class to the cells variable
   function addBluey() {
     bPosition.forEach((blue) => {
-      cells[blue].classList.add(blueyClass)
+      cells[blue].classList.add(alienBlueyClass)
     })
   }
 
@@ -139,7 +142,7 @@ function init() {
 
   function addGreeny() {
     gPosition.forEach((green) => {
-      cells[green].classList.add(greenyClass)
+      cells[green].classList.add(alienGreenyClass)
     })
   }
 
@@ -216,19 +219,26 @@ function init() {
     cells[position].classList.remove(spaceshipClass)
   }
 
-// Removing pink alien
+  // Removing pink alien
+  function removePinky(position) {
+    currentPinkyPosition.forEach((pink) => {
+      cells[pink].classList.remove(alienPinkyClass)
+    })
+  }
 
+  // Removing blue alien
+  function removeBluey(position) {
+    currentBlueyPosition.forEach((blue) => {
+      cells[blue].classList.remove(alienBlueyClass)
+    })
+  }
 
-
-
-// Removing blue alien
-
-
-
-// Removing green alien
-
-
-
+  // Removing green alien
+  function removeGreeny(position) {
+    currentGreenyPosition.forEach((green) => {
+      cells[green].classList.remove(alienGreenyClass)
+    })
+  }
 
   // creating function to move the spaceship left and right, setting left and right boundaries and fire the red laserbeam
   
@@ -243,7 +253,7 @@ function init() {
       console.log('left')
       currentSpaceshipPosition--
     } 
-    if (key === 32 ) {//try adding && with the left and right if above as an || to see if it works) { // && (cells[startingRlbPosition].classList.includes(redLaserClass) !== true)) {
+    if (key === 32 ) {
       console.log('fire')
       // audio.src = './sounds/Laser.mp3'
       // audio.play()
@@ -264,12 +274,14 @@ function init() {
       removeRlb(currentRlbPosition)
       currentRlbPosition -= cellWidth
       addRlb(currentRlbPosition)
-    }, 1000)
+    }, 20)
   }
 
   // function to move the aliens right
   // function moveAliens() {
-  //   remove
+  // removePinky()
+  // removeBlue()
+  // removeGreeny()
 
 
 
@@ -298,40 +310,79 @@ function init() {
   //     console.log(currentGreenyPosition = green + 1)
   //   })
   // }
-  
+  let moveExplosionInterval
+  function moveExplosionRight() {
+    moveExplosionInterval = setInterval(() => {
+      if (currentExplosionPosition > 400) {
+        clearInterval(moveExplosionInterval)
+        removeExplosion(currentExplosionPosition)
+      } else if (currentExplosionPosition % cellWidth !== cellWidth - 1) {
+        removeExplosion(currentExplosionPosition)
+        currentExplosionPosition++
+        addExplosion(currentExplosionPosition)
+      } else if (currentExplosionPosition % cellWidth === cellWidth - 1) {
+        removeExplosion(currentExplosionPosition)
+        currentExplosionPosition += cellWidth 
+        addExplosion(currentExplosionPosition)
+      } else if (currentExplosionPosition % cellWidth !== 0) {
+        removeExplosion(currentExplosionPosition)
+        currentExplosionPosition--
+        addExplosion(currentExplosionPosition)
+      }
+    }, 1000)
+  }
+
+  moveExplosionRight()
+
+
+  // THIS FUNCTION BELOW WORKS TO MOVE EXPLOSION TO THE RIGHT
+
+  // let moveExplosionInterval
+
+  // function moveExplosionRight() {
+  //   moveExplosionInterval = setInterval(() => {
+  //     if (currentExplosionPosition % cellWidth !== cellWidth - 1) {
+  //       removeExplosion(currentExplosionPosition)
+  //       currentExplosionPosition++
+  //       addExplosion(currentExplosionPosition)
+  //     } else {
+  //       clearInterval(moveExplosionInterval)
+  //       removeExplosion(currentExplosionPosition) 
+  //     }
+  //   }, 1000)
+  // }
+
+  // moveExplosionRight()
 
 
 
 
-
-
-  // creating a function to remove pink alien (pinkyClass)
 
   // function removeSpaceship(position) {
   //   cells[position].classList.remove(spaceshipClass)
   // }
 
-  // creating a function to remove blue alien (blueyClass)
 
-
-
-  // creating a function to remove green alien (greenyClass)
-
-
-
-
-
-
-
-
-  //  when space bar is pressed the fire() function should trigger and the rlb position should be currentspaceshipposition minus 20.
 
 
   // adding explosion sound function 
 
 
+  // function laserHitsAlien() {
+  //   if (cells[currentPinkyPosition].classList.includes(redLaserClass) || cells[currentBlueyPosition].classList.includes(redLaserClass) || cells[currentGreenyPosition].classList.includes(redLaserClass)) {
+  //     removeRlb(currentRlbPosition)
+  //     removePinky(currentPinkyPosition)
+  //     removeBluey(currentBlueyPosition)
+  //     removeGreeny(currentGreenyPosition)
+  //     addExplosion(currentExplosionPosition)
+  //   }
+  // }
+  //   setTimeout (() => {
+  //     removeExplosion(currentExplosionPosition)
+  //   }, 2000)
+  // }
 
-
+  // laserHitsAlien()
 
 
   //collision function where alien laser hits spaceship
@@ -356,26 +407,19 @@ function init() {
 
 
 
-
-
-
-
-
-
-
-
-
   createGrid()
   addPinky()
   addBluey()
   addGreeny()
   // alienLaserHitsSpaceship(390)
-  
+  // removePinky()
+  // removeBluey()
+  // removeGreeny()
   // addRlb(363)
   addPlb(360)
   addBlb(169)
   addGlb(217)
-  // addExplosion()
+  // addExplosion(startingExplosionPosition)
   // removeRlb()
   // removePlb()
   // removeBlb()
