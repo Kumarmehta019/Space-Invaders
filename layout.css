@@ -111,13 +111,16 @@ h1 {
 
 .game-intro-wrapper {
   border: 3px solid white;
-  margin-left: 35px;
-  margin-right: 35px;
-  margin-top: 50px;
-  margin-bottom: 25px;
+  
+  
   background-color: black;
+  width: 900px;
+  height: 500px;
+  margin: auto;
+  margin-bottom: 25px;
+  margin-top: 50px;
 /* toggle the below display none css property when the start button is clicked and it will remove the game intro page*/
-  display: ;
+  display: none;
 }
 
 .game-intro-wrapper h2 {
@@ -362,7 +365,9 @@ h1 {
   height: 40px;
   max-width: 40px;
   max-height: 40px;
-  border: 1px solid lightgrey;
+  border: 1px solid white;
+  color: white;
+  font-size: 8px;
 }
 
 .grid div.pinky {
@@ -482,7 +487,7 @@ h1 {
 
 .losing-game-over-wrapper {
   /* toggle the display from flex to none to show the losing game over page */
-  display: flex;
+  display: none;
   flex-direction: column;
   height: 550px;
   width: 500px;
@@ -540,7 +545,7 @@ h1 {
 
 .winning-game-over-wrapper {
   /* toggle the display from flex to none to show the winning game over page */
-  display: flex;
+  display: none;
   flex-direction: column;
   height: 550px;
   width: 500px;
