@@ -1,5 +1,14 @@
 function init() {
 
+
+
+  // Game Over & removing Intro page and Game
+  const youLost = document.querySelector('.losing-game-over-wrapper')
+  const youWin = document.querySelector('.winning-game-over-wrapper')
+  const removeIntro = document.querySelector('.game-intro-wrapper')
+  const removeGame = document.querySelector('.main-game-wrapper')
+  const startGameBtn = document.getElementById('startbtn')
+
   // audio variables
   const fire = document.querySelector('.fire')
   const hit = document.querySelector('.hit')
@@ -101,7 +110,6 @@ function init() {
   function moveAliens() {
     
     moveAliensInterval = setInterval(() => {
-      console.log(pinkAlienCurrentPosition)
       const leftWall = pinkAlienCurrentPosition.some((pink) => {
         return pink % width === 0
       }) 
@@ -139,8 +147,10 @@ function init() {
           })
           addPinkCurrent()
         }
-      }
-    }, 1000)
+      }  // } else if (pinkAlienCurrentPosition > 400) {
+      //   gameOverLost()
+      // }
+    }, 1500)
   }
 
 
@@ -185,6 +195,38 @@ function init() {
   }
 
 
+
+
+
+  // function to start game
+  //function startGame() {
+  // removeIntro.style.display = 'none'
+  // add create grid inside here & give it a set time out so the player can get his/her bearings
+  // removeGame.style.display = ''
+
+  // }
+
+
+  // function for game over lost
+
+  // function gameOverLost() {
+  //   clearInterval(moveAliensInterval)
+  //   removeGame.style.display = 'none'
+  //   youLose.style.display = 'flex'
+  //   gameOverLost()
+  // }
+
+  // function for Game Over Win
+  // function wonGame() {
+  //   clearInterval(moveAliensInterval)
+  //   removeGame.style.display = 'none'
+  //   youWin.style.display = 'flex'
+  //   gameOverWin()
+  // }
+
+
+
+
   //creating function for the fire sound of the red laser beam
 
   function rlbFire() {
@@ -227,10 +269,10 @@ function init() {
 
 
   createGrid()
-  
+
 
   window.addEventListener('keydown', leftRightAndFire)
-
+  window.addEventListener('click', startGame)
 
 
 
