@@ -5,6 +5,10 @@
 body {
   font-family: 'Press Start 2P', cursive;
   background-color: black;
+  /* background-image: url('Images/brett-ritchie-1vKTnwLMdqs-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center; */
 }
 
 .heading-wrapper{
@@ -73,6 +77,18 @@ h1 {
 .life img{
   margin-left: -10px;
   margin-right: 1px;
+}
+
+.three-life1 {
+  display: show;
+}
+
+.three-life2 {
+  display: show;
+}
+
+.three-life3 {
+  display: show;
 }
 
 .score-wording {
@@ -186,7 +202,7 @@ h1 {
 .alien-greeny {
   display: flex;
   flex-direction: row;
-  margin-left: -50px;
+  margin-left: 5px;
 }
 .alien-greeny p {
   font-size: 10px;
@@ -202,7 +218,9 @@ h1 {
   display: flex;
   flex-direction: row;
   font-size: 10px;
-  margin-left: 20px;
+  margin: auto;
+  margin-left: 10px;
+  
 }
 
 .alien-bluey p {
@@ -212,6 +230,7 @@ h1 {
 }
 
 .alien-bluey img {
+  margin: auto;
   margin-right: 5px;
 }
 
@@ -219,6 +238,7 @@ h1 {
   display: flex;
   flex-direction: row;
   font-size: 10px;
+  margin: auto;
   margin-left: 20px;
 }
 
@@ -243,7 +263,7 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-left: -10px;
+  margin-left: 20px;
 }
 
 .spaceship p {
@@ -253,6 +273,8 @@ h1 {
 }
 
 .spaceship img {
+  margin: auto;
+  margin-left: 20px;
   margin-right: 6px;
 }
 
@@ -271,7 +293,8 @@ h1 {
   
 }
 .life img {
-  margin-left: 20px;
+  margin: auto;
+  margin-left: -10px;
 }
 
 .explosion {

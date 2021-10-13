@@ -17,27 +17,27 @@
 
   <div class="page-wrapper">
     <div class = "heading-wrapper">
-      <audio controls loop autoplay volume= 0.1>
+      <audio controls loop autoplay>
         <source src="Sounds/Intergalactic Odyssey.mp3" type="audio/mp3">
         Your browser does not support the audio element.
       </audio>
       <div>
-        <p class="high-score-wording">High Score:<span id="high-score-numbers">118250</span></p>
+        <p class="high-score-wording">High Score:<span id="high-score-numbers">0</span></p>
       </div>
       
     </div>
     <div><h1 class="animate__animated animate__zoomInDown animate__delay-2s">Space Invaders</h1></div>
     <div class="life-score-kills-wrapper">
       <div class="animate__animated animate__shakeY animate__slower life-wrapper">
-        <div class="three-life"><img src="Images/Life.png" alt="heart image" width="50" height="35"></div>
-        <div class="three-life"><img src="Images/Life.png" alt="heart image" width="50" height="35"></div>
-        <div class="three-life"><img src="Images/Life.png" alt="heart image" width="50" height="35"></div>
+        <div class="three-life1"><img src="Images/Life.png" alt="heart image" width="50" height="35"></div>
+        <div class="three-life2"><img src="Images/Life.png" alt="heart image" width="50" height="35"></div>
+        <div class="three-life3"><img src="Images/Life.png" alt="heart image" width="50" height="35"></div>
       </div>
       <div class="score-wrapper">
-      <p class="animate__animated animate__pulse animate__fast animate__infinite score-wording">Score:<span id="score-numbers">2000</span></p>
+      <p class="animate__animated animate__pulse animate__fast animate__infinite score-wording">Score:<span id="score-numbers">0</span></p>
       </div>
       <div class="kills-wrapper">
-        <p class="animate__animated animate__shakeY animate__slower kills-wording">Kills:<span id="kills-numbers">50</span></p>
+        <p class="animate__animated animate__shakeY animate__slower kills-wording">Kills:<span id="kills-numbers">90</span></p>
       </div>
     </div>
 
@@ -60,22 +60,22 @@
       <div class="key-legend-wrapper">
         <div class="first-row-key-legend">
           <div class="alien-greeny">
-            <img src="Images/green alien.png" alt="alien greeny image" width="45" height="50" class= "animate__animated animate__shakeY animate__slower animate__infinite">
-            <p>Kill Greeny and earn 10 points</p>
+            <img src="Images/RedLaserBeam.png" alt="red laser beam" width="20" height="35" class= "animate__animated animate__shakeY animate__slower animate__infinite">
+            <p>Red laser beam will kill Pinky</p>
           </div>
           <div class="alien-bluey">
-            <img src="Images/alienblue (1).png" alt="alien bluey image" width="47" height="50" class="animate__animated animate__shakeY animate__slower animate__infinite">
-            <p>Kill Bluey and earn 20 points</p>
+            <img src="Images/Green Laser Beam.png" alt="green laser beam" width="35" height="35" class="animate__animated animate__shakeY animate__slower animate__infinite">
+            <p>Green laser beam will kill you so watch out</p>
           </div>
           <div class="alien-pinky">
             <img src="Images/purple alien.png" alt="alien pinky image" width="40" height="50" class= "animate__animated animate__shakeY animate__slower animate__infinite">
-            <p>Kill Pinky and earn 50 points</p>
+            <p>Kill Pinky and earn 100 points</p>
           </div>
         </div>
         <div class="second-row-key-legend">
           <div class="spaceship">
             <img src="Images/spaceship2.png" alt="spaceship image" width="40" height="45" class= "animate__animated animate__shakeY animate__slower animate__infinite">
-            <p>Spaceship, used to kill Greeny, Bluey & Pinky</p>
+            <p>Spaceship, used to kill Pinky</p>
           </div>
           <div class="life">
             <img src="Images/Life.png" alt="life image" width="55" height="45" class= "animate__animated animate__shakeY animate__slower animate__infinite">
@@ -112,7 +112,7 @@
       <h3>GAME OVER</h3>
       <p class="animate__animated animate__shakeY animate__infinite animate__slower you-lost-p">YOU LOST!</p>
       <img src="Images/SkullAndBones-crying.png" alt ="crying skull image" width=272 height=228>
-      <p class="score-wording">Final Score:<span id="score-numbers">10000</span></p>
+      <p class="score-wording">Final Score:<span id="scored-numbers1">0</span></p>
       <button type="button" id="restartbtn" class="animate__animated animate__pulse animate__faster animate__infinite ">RESTART</button>
     </div>
 
@@ -122,7 +122,7 @@
       <h3>GAME OVER</h3>
       <p class="animate__animated animate__shakeY animate__infinite animate__slower you-won-p">YOU WON!</p>
       <img src="Images/Smiley face.png" alt ="Happy emoji image" width=220 height=220>
-      <p class="score-wording">Final Score:<span id="score-numbers">10000</span></p>
+      <p class="score-wording">Final Score:<span id="scored-numbers2">0</span></p>
       <button type="button" id="restartbtn" class="animate__animated animate__pulse animate__faster animate__infinite">RESTART</button>
     </div>
 
