@@ -9,7 +9,7 @@ function init() {
 
   // kills variable
   const alienKills = document.getElementById('kills-numbers')
-  let killingTotal = 90
+  let killingTotal = 0
 
   // adding three life wrapper with document Queryselector all & lives counter
   const playerLifeOne = document.querySelector('.three-life1')
@@ -50,7 +50,7 @@ function init() {
 
   const pinkAlienStartingPositions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 41, 42, 43, 44, 45, 46, 47, 48,49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98]
 
-  let pinkAlienCurrentPosition = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 41, 42, 43, 44, 45, 46, 47, 48,49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98]
+  let pinkAlienCurrentPosition = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98]
 
   let deadPinkAliens = []
 
@@ -81,7 +81,7 @@ function init() {
     for (let i = 0; i < cellCount; i++) {
       const cell = document.createElement('div')
       cell.innerText = i 
-      grid.appendChild(cell)
+      grid.appendChild(cell) 
       cells.push(cell)
     }
     addSpaceship(spaceshipStartingPosition)
@@ -213,7 +213,7 @@ function init() {
           addPinkCurrent()
         }
       }
-    }, 200)
+    }, 2000)
   }
 
 
@@ -259,7 +259,6 @@ function init() {
         cells[currentRlbPosition].classList.remove(pinkAlienClass)
         const removedPinkAlien = pinkAlienCurrentPosition.indexOf(currentRlbPosition)
         pinkAlienCurrentPosition.splice(removedPinkAlien, 1)
-        console.log('show me', currentRlbPosition)
         clearInterval(moveRlbInterval)
         addExplosion(currentRlbPosition)
         alienHit()
@@ -270,16 +269,16 @@ function init() {
         highScore.innerText = playerScore
         setTimeout(() => { 
           removeExplosion(currentRlbPosition)
-        }, 120)
-        // clearInterval(moveRlbInterval)
-        
-        console.log('removedaliens', removedPinkAlien)
+        }, 60)
         deadPinkAliens.push(removedPinkAlien)
-        console.log('dead aliens', deadPinkAliens)
-        killingTotal -= 1
+        killingTotal += 1
         alienKills.innerText = killingTotal
+      } 
+      if (deadPinkAliens.length === 90) {
+        clearInterval(moveRlbInterval)
+        gameOverWin()
       }
-    }, 20)
+    }, 20)   
   }
   
 
@@ -359,23 +358,25 @@ function init() {
   // function to start game
   function startGame() {
     removeIntro.style.display = 'none'
-    removeGame.style.display = 'show'
+    removeGame.style.display = 'flex'
     setTimeout(() => { 
-      GameReload
-    }, 120)
+      addSpaceship(spaceshipStartingPosition)
+      addPinkStarting()
+      moveAliens()
+    }, 1500)
   }
 
-  // function to re-start game
-  function restartGame() {
-    removeIntro.style.display = 'none'
-    removeGame.style.display = 'show'
-    setTimeout(() => { 
-      createGrid()
-    }, 120)
-  }
+  // // function to re-start game
+  // function restartGame() {
+  //   removeIntro.style.display = 'none'
+  //   removeGame.style.display = 'show'
+  //   setTimeout(() => { 
+  //     createGrid()
+  //   }, 120)
+  // }
 
 
-  // function for game over lost
+  // // function for game over lost
 
   function gameOverLost() {
     clearInterval(moveAliensInterval)
@@ -384,28 +385,39 @@ function init() {
     gameOverLostMusic()
   }
 
-  // function to restaart game on losing
-  function restartGameLosing() {
-    youLost.style.display = 'none'
-    removeGame.style.display = ''
-    pinkAlienCurrentPosition = pinkAlienStartingPositions
-    setTimeout(() => { 
-      GameReload()
-    }, 120)
+  function gameOverWin() {
+    clearInterval(moveAliensInterval)
+    removeGame.style.display = 'none'
+    youWin.style.display = 'flex'
+    gameOverWinMusic()
   }
 
-  // function to restaart game on winning
-  function restartGameWinning() {
-    removeGame.style.display = 'show'
-    setTimeout(() => { 
-      createGrid()
-    }, 120)
-  }
 
-  // function to reload game
-  function GameReload() {
-    location.reload()
-  }
+  // // function to restart game on losing
+  // function restartGameLosing() {
+  //   youLost.style.display = 'none'
+  //   removeGame.style.display = ''
+  //   playerScore.innerText = 0
+  //   killingTotal.innerText = 90
+  //   setTimeout(() => { 
+  //     addSpaceship(spaceshipStartingPosition)
+  //     addPinkStarting()
+  //     moveAliens()
+  //   }, 1500)
+  // }
+
+  // // function to restaart game on winning
+  // function restartGameWinning() {
+  //   removeGame.style.display = 'show'
+  //   setTimeout(() => { 
+  //     createGrid()
+  //   }, 120)
+  // }
+
+  // // function to reload game
+  // function GameReload() {
+  //   document.reload()
+  // }
 
   //creating function for the fire sound of the red laser beam
 
@@ -452,7 +464,6 @@ function init() {
 
 
   window.addEventListener('keydown', leftRightAndFire)
-  window.addEventListener('load', GameReload)
   startGameBtn.addEventListener('click', startGame)
   losingRestartGameBtn.addEventListener('click', restartGameLosing)
   winningRestartGameBtn.addEventListener('click', restartGameWinning)
