@@ -80,7 +80,7 @@ function init() {
   function createGrid() {
     for (let i = 0; i < cellCount; i++) {
       const cell = document.createElement('div')
-      cell.innerText = i 
+      // cell.innerText = i 
       grid.appendChild(cell) 
       cells.push(cell)
     }
@@ -282,78 +282,6 @@ function init() {
   }
   
 
-  // function laserHitsAlien() {
-  //   // console.log('showme', cells)
-  //   if (cells[currentRlbPosition].classList.contains(pinkAlienClass)) {
-      
-  //     cells[currentRlbPosition].classList.remove(redLaserClass)
-  //     cells[currentRlbPosition].classList.remove(pinkAlienClass)
-  //     alienHit()
-  //     addExplosion(currentRlbPosition)
-  //     playerScore += 100
-  //     score.innerText = playerScore
-  //     setTimeout(() => cells[currentRlbPosition].classlist.remove(explosionClass), 200)
-  //     clearInterval(moveRlbInterval)
-  //   }
-  // } 
-  // laserHitsAlien()
-
-  // let alienHitInterval
-
-  // function playerHitsAlien() {
-  //   alienHitInterval = setInterval(() => {
-  //     cells.forEach((cell) => {
-  //       if (cell.classList.contains(pinkAlienClass) && (cell.classList.contains(redLaserClass))) {
-  //         removeOnePink(pinkAlienCurrentPosition)
-  //         removeRlb(currentRlbPosition)
-  //         alienHit()
-  //         addExplosion(currentRlbPosition)
-  //         playerScore += 100
-  //         score.innerText = playerScore
-  //       }
-  //     })
-  //   }, 300)
-  // }
-  
-  
-  
-  
-  
-  
-  
-  
-  // creating function to move green laser beam
-
-  // let moveGlbInterval
-
-  // function moveGlb() {
-  //   moveGlbInterval = setInterval(() => {
-    //     for (let i = 0; i < pinkAlienCurrentPosition.length; i++) {
-    //   if (pinkAlienCurrentPosition[i] > cellsLength) {
-    //     console.log('Game Over', pinkAlienCurrentPosition[i])
-    //   }
-    // }
-
-  
-
-  //     if (currentRlbPosition < 0) {
-  //       clearInterval(moveRlbInterval)
-  //       removeRlb(currentRlbPosition)
-  //     }
-  //     removeRlb(currentRlbPosition)
-  //     currentRlbPosition -= width
-  //     addRlb(currentRlbPosition)
-  //   }, 1000)
-  // }
-
-  // function for collision and aliens reaching cells >400
-  // playerLifeOne.style.display = 'none'
-  // playerLifeTwo.style.display = 'none'
-  // playerLifeThree.style.display = 'none'
-  
-
-
-
 
   // function to start game
   function startGame() {
@@ -366,18 +294,7 @@ function init() {
     }, 1500)
   }
 
-  // // function to re-start game
-  // function restartGame() {
-  //   removeIntro.style.display = 'none'
-  //   removeGame.style.display = 'show'
-  //   setTimeout(() => { 
-  //     createGrid()
-  //   }, 120)
-  // }
-
-
-  // // function for game over lost
-
+  // function for game over lost
   function gameOverLost() {
     clearInterval(moveAliensInterval)
     removeGame.style.display = 'none'
@@ -385,6 +302,7 @@ function init() {
     gameOverLostMusic()
   }
 
+    // function for game over win 
   function gameOverWin() {
     clearInterval(moveAliensInterval)
     removeGame.style.display = 'none'
@@ -393,31 +311,21 @@ function init() {
   }
 
 
-  // // function to restart game on losing
-  // function restartGameLosing() {
-  //   youLost.style.display = 'none'
-  //   removeGame.style.display = ''
-  //   playerScore.innerText = 0
-  //   killingTotal.innerText = 90
-  //   setTimeout(() => { 
-  //     addSpaceship(spaceshipStartingPosition)
-  //     addPinkStarting()
-  //     moveAliens()
-  //   }, 1500)
-  // }
+  // function to restart game on losing
+  function restartGameLosing() {
+    youLost.style.display = 'none'
+    removeGame.style.display = ''
+    window.location.reload()
+  }
 
-  // // function to restaart game on winning
-  // function restartGameWinning() {
-  //   removeGame.style.display = 'show'
-  //   setTimeout(() => { 
-  //     createGrid()
-  //   }, 120)
-  // }
 
-  // // function to reload game
-  // function GameReload() {
-  //   document.reload()
-  // }
+  // function to restaart game on winning
+  function restartGameWinning() {
+    youLost.style.display = 'none'
+    removeGame.style.display = ''
+    window.location.reload()
+  }
+
 
   //creating function for the fire sound of the red laser beam
 
@@ -454,7 +362,7 @@ function init() {
 
   // creating function for game over win sound
   function gameOverWinMusic() {
-    fire.src = 'Sounds/win.mp3'
+    fire.src = 'Sounds/Win.mp3'
     fire.play()
   }
 

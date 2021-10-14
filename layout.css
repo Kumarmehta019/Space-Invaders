@@ -59,7 +59,7 @@ h1 {
 
 @keyframes phasingone {
   from {
-    opacity: 0.7;
+    opacity: 0.8;
   }
   to {
     opacity: 1;
@@ -360,6 +360,11 @@ h1 {
   /* toggle the display to none to hide the main game*/
   display: ;
   margin-bottom: 20px;
+  background-image: url('Images/brett-ritchie-1vKTnwLMdqs-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  opacity: 1;
 }
 
 .grid-wrapper {
@@ -388,7 +393,7 @@ h1 {
   height: 40px;
   max-width: 40px;
   max-height: 40px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   color: white;
   font-size: 8px;
 }
