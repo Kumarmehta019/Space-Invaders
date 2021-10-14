@@ -23,6 +23,8 @@ function init() {
   const removeIntro = document.querySelector('.game-intro-wrapper')
   const removeGame = document.querySelector('.main-game-wrapper')
   const startGameBtn = document.getElementById('startbtn')
+  const losingRestartGameBtn = document.getElementById('restartbtn1')
+  const winningRestartGameBtn = document.getElementById('restartbtn2')
 
   // audio variables
   const fire = document.querySelector('.fire')
@@ -90,15 +92,19 @@ function init() {
   // function to add pink alien to starting position on grid
   function addPinkStarting() {
     pinkAlienStartingPositions.forEach((pink) => {
-      cells[pink].classList.add(pinkAlienClass)
-    })
-  }
+      if (pink !== deadPinkAliens) {
+        cells[pink].classList.add(pinkAlienClass)
+      } 
+    })    
+  } 
 
   // function to add pink aliens to current position on grid
   function addPinkCurrent() {
     pinkAlienCurrentPosition.forEach((pink) => {
-      cells[pink].classList.add(pinkAlienClass)
-    })
+      if (pink !== deadPinkAliens) {
+        cells[pink].classList.add(pinkAlienClass)
+      } 
+    })    
   }
   console.log(pinkAlienCurrentPosition !== deadPinkAliens)
   // creating a function to add the spaceship to the starting position (spaceshipStartingPosition)
@@ -248,9 +254,10 @@ function init() {
       removeRlb(currentRlbPosition)
       currentRlbPosition -= width
       addRlb(currentRlbPosition)
-      if (cells[currentRlbPosition].classList.contains(pinkAlienClass)) {
+      if (cells[currentRlbPosition].classList.contains(pinkAlienClass)) { 
         cells[currentRlbPosition].classList.remove(redLaserClass)
-        removeOnePink(currentRlbPosition)
+        cells[currentRlbPosition].classList.remove(pinkAlienClass)
+        console.log('show me', cells[currentRlbPosition])
         addExplosion(currentRlbPosition)
         alienHit()
         playerScore += 100
@@ -263,6 +270,7 @@ function init() {
         }, 120)
         clearInterval(moveRlbInterval)
         const removedPinkAlien = pinkAlienCurrentPosition.indexOf(currentRlbPosition)
+        console.log('removedaliens', removedPinkAlien)
         deadPinkAliens.push(removedPinkAlien)
         console.log('dead aliens', deadPinkAliens)
         killingTotal -= 1
@@ -346,12 +354,22 @@ function init() {
 
 
   // function to start game
-  //function startGame() {
-  // removeIntro.style.display = 'none'
-  // add create grid inside here & give it a set time out so the player can get his/her bearings
-  // removeGame.style.display = ''
+  function startGame() {
+    removeIntro.style.display = 'none'
+    removeGame.style.display = 'show'
+    setTimeout(() => { 
+      createGrid()
+    }, 120)
+  }
 
-  // }
+  // function to re-start game
+  function restartGame() {
+    removeIntro.style.display = 'none'
+    removeGame.style.display = 'show'
+    setTimeout(() => { 
+      createGrid()
+    }, 120)
+  }
 
 
   // function for game over lost
@@ -363,14 +381,21 @@ function init() {
     gameOverLostMusic()
   }
 
-  // function for Game Over Win
-  // function wonGame() {
-  //   clearInterval(moveAliensInterval)
-  //   removeGame.style.display = 'none'
-  //   youWin.style.display = 'flex'
-  //   gameOverWin()
-  // }
+  // function to restaart game on losing
+  function restartGameLosing() {
+    removeGame.style.display = 'show'
+    setTimeout(() => { 
+      createGrid()
+    }, 120)
+  }
 
+  // function to restaart game on winning
+  function restartGameWinning() {
+    removeGame.style.display = 'show'
+    setTimeout(() => { 
+      createGrid()
+    }, 120)
+  }
 
 
 
@@ -419,8 +444,9 @@ function init() {
 
 
   window.addEventListener('keydown', leftRightAndFire)
-  // window.addEventListener('click', startGame)
-
+  startGameBtn.addEventListener('click', startGame)
+  losingRestartGameBtn.addEventListener('click', restartGameLosing)
+  winningRestartGameBtn.addEventListener('click', restartGameWinning)
 
 
 
