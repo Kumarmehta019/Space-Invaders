@@ -257,7 +257,10 @@ function init() {
       if (cells[currentRlbPosition].classList.contains(pinkAlienClass)) { 
         cells[currentRlbPosition].classList.remove(redLaserClass)
         cells[currentRlbPosition].classList.remove(pinkAlienClass)
-        console.log('show me', cells[currentRlbPosition])
+        const removedPinkAlien = pinkAlienCurrentPosition.indexOf(currentRlbPosition)
+        pinkAlienCurrentPosition.splice(removedPinkAlien, 1)
+        console.log('show me', currentRlbPosition)
+        clearInterval(moveRlbInterval)
         addExplosion(currentRlbPosition)
         alienHit()
         playerScore += 100
@@ -268,8 +271,8 @@ function init() {
         setTimeout(() => { 
           removeExplosion(currentRlbPosition)
         }, 120)
-        clearInterval(moveRlbInterval)
-        const removedPinkAlien = pinkAlienCurrentPosition.indexOf(currentRlbPosition)
+        // clearInterval(moveRlbInterval)
+        
         console.log('removedaliens', removedPinkAlien)
         deadPinkAliens.push(removedPinkAlien)
         console.log('dead aliens', deadPinkAliens)
@@ -358,7 +361,7 @@ function init() {
     removeIntro.style.display = 'none'
     removeGame.style.display = 'show'
     setTimeout(() => { 
-      createGrid()
+      GameReload
     }, 120)
   }
 
@@ -383,9 +386,11 @@ function init() {
 
   // function to restaart game on losing
   function restartGameLosing() {
-    removeGame.style.display = 'show'
+    youLost.style.display = 'none'
+    removeGame.style.display = ''
+    pinkAlienCurrentPosition = pinkAlienStartingPositions
     setTimeout(() => { 
-      createGrid()
+      GameReload()
     }, 120)
   }
 
@@ -397,7 +402,10 @@ function init() {
     }, 120)
   }
 
-
+  // function to reload game
+  function GameReload() {
+    location.reload()
+  }
 
   //creating function for the fire sound of the red laser beam
 
@@ -444,6 +452,7 @@ function init() {
 
 
   window.addEventListener('keydown', leftRightAndFire)
+  window.addEventListener('load', GameReload)
   startGameBtn.addEventListener('click', startGame)
   losingRestartGameBtn.addEventListener('click', restartGameLosing)
   winningRestartGameBtn.addEventListener('click', restartGameWinning)

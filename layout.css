@@ -136,7 +136,7 @@ h1 {
   margin-bottom: 25px;
   margin-top: 50px;
 /* toggle the below display none css property when the start button is clicked and it will remove the game intro page*/
-  display: none;
+  display: ;
 }
 
 .game-intro-wrapper h2 {
