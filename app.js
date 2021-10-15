@@ -33,7 +33,8 @@ function init() {
   const life = document.querySelector('.life')
   const lost = document.querySelector('.lost')
   const win = document.querySelector('.win')
-  
+ 
+
 
   // Grid Variables
   const grid = document.querySelector('.grid')
@@ -302,12 +303,12 @@ function init() {
     gameOverLostMusic()
   }
 
-    // function for game over win 
+  // function for game over win 
   function gameOverWin() {
     clearInterval(moveAliensInterval)
     removeGame.style.display = 'none'
     youWin.style.display = 'flex'
-    gameOverWinMusic()
+    // gameOverWinMusic()
   }
 
 
@@ -360,11 +361,11 @@ function init() {
   }
 
 
-  // creating function for game over win sound
-  function gameOverWinMusic() {
-    fire.src = 'Sounds/Win.mp3'
-    fire.play()
-  }
+  // // creating function for game over win sound
+  // function gameOverWinMusic() {
+  //   fire.src = 'Sounds/Win.mp3'
+  //   fire.play()  
+  // }
 
 
 
