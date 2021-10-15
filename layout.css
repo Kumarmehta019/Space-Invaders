@@ -5,10 +5,6 @@
 body {
   font-family: 'Press Start 2P', cursive;
   background-color: black;
-  /* background-image: url('Images/brett-ritchie-1vKTnwLMdqs-unsplash.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center; */
 }
 
 .heading-wrapper{
@@ -136,7 +132,7 @@ h1 {
   margin-bottom: 25px;
   margin-top: 50px;
 /* toggle the below display none css property when the start button is clicked and it will remove the game intro page*/
-  display: none;
+  display: ;
 }
 
 .game-intro-wrapper h2 {
@@ -358,7 +354,7 @@ h1 {
 
 .main-game-wrapper {
   /* toggle the display to none to hide the main game*/
-  display: ;
+  display: none;
   margin-bottom: 20px;
   background-image: url('Images/brett-ritchie-1vKTnwLMdqs-unsplash.jpg');
   background-repeat: no-repeat;

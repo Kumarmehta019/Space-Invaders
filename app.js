@@ -17,6 +17,7 @@ function init() {
   const playerLifeThree = document.querySelector('.three-life3')
   let lives = 3
 
+
   // Game Over & removing Intro page and Game
   const youLost = document.querySelector('.losing-game-over-wrapper')
   const youWin = document.querySelector('.winning-game-over-wrapper')
@@ -33,7 +34,7 @@ function init() {
   const life = document.querySelector('.life')
   const lost = document.querySelector('.lost')
   const win = document.querySelector('.win')
- 
+
 
 
   // Grid Variables
@@ -63,6 +64,7 @@ function init() {
   const spaceshipClass = 'spaceshipone'
   const spaceshipStartingPosition = 390
   let currentSpaceshipPosition = 390
+  let deadSpaceships = []
 
   // creating red laser beam variables
   const redLaserClass = 'rlb'
@@ -70,7 +72,7 @@ function init() {
 
   // creating variable for green laser beam
   const greenLaserClass = 'glb'
-  let currentGlbPosition
+  let currentGlbPosition = 0
 
   //creating variables for explosion
   const explosionClass = 'explosionone'
@@ -85,9 +87,9 @@ function init() {
       grid.appendChild(cell) 
       cells.push(cell)
     }
-    addSpaceship(spaceshipStartingPosition)
-    addPinkStarting()
-    moveAliens()
+    // addSpaceship(spaceshipStartingPosition)
+    // addPinkStarting()
+    // moveAliens()
   }
 
   // function to add pink alien to starting position on grid
@@ -181,7 +183,6 @@ function init() {
       }) 
       if (bottomline === true) {
         gameOverLost()
-
       } else if (direction === 'right') {
         if (rightWall) {
           removePink()
@@ -214,7 +215,7 @@ function init() {
           addPinkCurrent()
         }
       }
-    }, 2000)
+    }, 300)
   }
 
 
@@ -282,7 +283,48 @@ function init() {
     }, 20)   
   }
   
+  // let moveGlbInterval
 
+  // function to move green laser beams from alien
+
+  // function moveGlb() {
+  //   moveGlbInterval = setInterval(() => {
+  //     if (currentGlbPosition > 400) {
+  //       clearInterval(moveGlbInterval)
+  //       removeGlb(currentGlbPosition)
+  //     }
+  //     removeGlb(currentGlbPosition)
+  //     currentGlbPosition += width
+  //     addGlb(currentGlbPosition)
+  //     if (cells[currentGlbPosition].classList.contains(spaceshipClass)) { 
+  //       cells[currentGlbPosition].classList.remove(greenLaserClass)
+  //       cells[currentGlbPosition].classList.remove(spaceshipClass)
+  //       const removedSpaceship = currentSpaceshipPosition.indexOf(currentGlbPosition)
+  //       clearInterval(moveGlbInterval) 
+  //       addExplosion(currentGlbPosition)
+  //       spaceshipDestroyed()
+  //       lives -= 1
+  //       setTimeout(() => { 
+  //         removeExplosion(currentGlbPosition)
+  //         addSpaceship(spaceshipStartingPosition)
+  //       }, 60)
+  //       deadSpaceships.push(removedSpaceship)
+  //       removeLife()
+  //     } 
+  //   }, 20)    
+  // }
+
+  // function to remove life
+  // function removeLife() {
+  //   if (lives === 2) {
+  //     playerLifeThree.style.display = 'none'
+  //   } else if (lives === 1) {
+  //     playerLifeTwo.style.display = 'none'
+  //   } else if (lives === 0) {
+  //     playerLifeOne.style.display = 'none'
+  //     gameOverLost() 
+  //   }
+  // }
 
   // function to start game
   function startGame() {
@@ -322,7 +364,7 @@ function init() {
 
   // function to restaart game on winning
   function restartGameWinning() {
-    youLost.style.display = 'none'
+    youWin.style.display = 'none'
     removeGame.style.display = ''
     window.location.reload()
   }
@@ -337,34 +379,34 @@ function init() {
 
   // creating function for the alien hit sound
   function alienHit() {
-    fire.src = 'Sounds/hit.mp3'
-    fire.play()
+    hit.src = 'Sounds/hit.mp3'
+    hit.play()
   }
 
   // creating function for Spaceship Destroyed sound
   function spaceshipDestroyed() {
-    fire.src = 'Sounds/destroyed.mp3'
-    fire.play()
+    destroyed.src = 'Sounds/destroyed.mp3'
+    destroyed.play()
   }
 
   // creating function for life sound
   function lifeLost() {
-    fire.src = 'Sounds/life.mp3'
-    fire.play()
+    life.src = 'Sounds/life.mp3'
+    life.play()
   }
 
 
   // creating function for game over lost sound
   function gameOverLostMusic() {
-    fire.src = 'Sounds/lost.mp3'
-    fire.play()
+    lost.src = 'Sounds/lost.mp3'
+    lost.play()
   }
 
 
   // // creating function for game over win sound
   // function gameOverWinMusic() {
-  //   fire.src = 'Sounds/Win.mp3'
-  //   fire.play()  
+  //   win.src = 'Sounds/Win.mp3'
+  //   win.play()  
   // }
 
 
