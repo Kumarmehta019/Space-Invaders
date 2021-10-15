@@ -215,7 +215,7 @@ function init() {
           addPinkCurrent()
         }
       }
-    }, 300)
+    }, 1500)
   }
 
 
