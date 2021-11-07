@@ -121,7 +121,17 @@ https://user-images.githubusercontent.com/88886169/140653621-d287d96c-824b-4dbb-
 
 ## 6. Wins and Challenges
 
+### Wins:
+- The biggest win for me is being able to proudly showcase this game, especially from a career changer who hasnt coded much using Javascript. 
+- The alien movement was a really big win for me, especially as I really struggled with this feature of the game. I am proud that I was able to not give up in the face of such a challenge and take regular breaks and also move on to doing other parts of the game and then come back to the problem with fresh ideas to tackle the problem.
+- I was able to implement animation and music to the game which really made the game user friendly.
 
+### Challenges:
+- The alien movement was a big challenge for me, but I was able to get this to work and is one of the biggest achievements for me on this game.
+- Getting random laser beams to fire from the aliens on the bottom row of the group of aliens was a real challenge.
+
+## 6. Future Improvements
+- 
 
 
 
