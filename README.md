@@ -15,6 +15,7 @@ Space Invaders is a classic arcade game from the 80s. The player aims to shoot l
 
 I wanted to create a similar game but sought to modernise it by using better images for the spaceship and aliens and laser beams. The aim was to create the nostalgic feel for the game but with better graphics. 
 
+![Space Invaders Title Screen!]()
 
 
-
+Play the full game here: https://kumarmehta019.github.io/SEI-Project-1/
