@@ -5,7 +5,7 @@
 |  **No:**     | **Content** |
 | -------- | ------- |
 |    1    | **`Project Overview`**|
-|    2     | **`The Brief & Technical Requirements`**|
+|    2     | **`The Brief and Technical Requirements`**|
 |    3    | **`Technologies Used`**|
 |    4     | **`Project Timeline - 7 Days`**|
 |    5     | **`Bugs`**|
@@ -32,7 +32,7 @@ I wanted to create a similar game but sought to modernise it by using better ima
 > 2. [Space Invaders - Wikipedia](https://en.wikipedia.org/wiki/Space_Invaders)
 
 
-## 2. Project Brief & Technical Requirements
+## 2. Project Brief and Technical Requirements
 
 - Build a grid based game in the browser
 - The player should be able to clear at least one wave of aliens
@@ -130,8 +130,20 @@ https://user-images.githubusercontent.com/88886169/140653621-d287d96c-824b-4dbb-
 - The alien movement was a big challenge for me, but I was able to get this to work and is one of the biggest achievements for me on this game.
 - Getting random laser beams to fire from the aliens on the bottom row of the group of aliens was a real challenge.
 
-## 6. Future Improvements
-- 
+## 7. Future Improvements
+- Fix the bugs mentioned above
+- Make random laser beams fire from the bottom row of aliens
+- Add different types of aliens
+- Store the players score in local storage to implement `High Score` feature
+- Make the player lose lives when alien laser beam hits the spaceship
+- Make a second wave of aliens after the first wave has been beaten by the player
+
+## 8. Key Learnings
+- This project has helped me to solidify my understanding of Javascript fundamentals
+- Knowing when to leave a problem and move to another section of the project, and then come back to it with a fresh pair of eyes
+- Learning how to use Fisma to create basic frame work/designs
+- Using console logs to debug parts of the code which dont work
+- Keeping the mindset to create a simple game and trying not to over-complicate things has helped me iron out small bugs and create a user friendly fun game
 
 
 
