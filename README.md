@@ -56,7 +56,7 @@ I wanted to create a similar game but sought to modernise it by using better ima
 
 ### Day One:
 
-The first day was spent planning the game by pseudo coding the MVP level. I then started creating the wire frame and mock up designs of the game using Fisma. This was also the first time I was using Fisma so I took sometime to go through a few tutorials on how to use Fisma. I had created a rough design of how I wanted the game to look. Below are a few images of my Fisma designs:
+The first day was spent planning the game by pseudo coding the MVP level. I then started creating the wire frame and mock up designs of the game using Fisma. This was also the first time I was using Fisma so I took some time to go through a few tutorials on how to use Fisma. THis was a great learning experience for me and I was able to create a rough design of how I wanted the game to look. Below are a few images of my Fisma designs:
 
 <img width="490" alt="Screenshot 2021-10-07 at 22 24 06" src="https://user-images.githubusercontent.com/88886169/140654792-c79806be-da82-4664-bdcc-a5294ed31e00.png">
 
@@ -65,6 +65,23 @@ The first day was spent planning the game by pseudo coding the MVP level. I then
 <img width="490" alt="Screenshot 2021-10-07 at 22 24 35" src="https://user-images.githubusercontent.com/88886169/140654799-e8e4c6a6-a4e6-4d94-83ec-35b0d7160068.png">
 
 <img width="490" alt="Screenshot 2021-10-07 at 22 24 48" src="https://user-images.githubusercontent.com/88886169/140654803-af1a147d-df23-4b4d-b6bc-cada5a6967b4.png">
+
+During the process of designing the game, I used the time to acquire images, sounds and fonts I wanted to use for the game. This was a real time saver, especially when the project moved closer to deadline day.
+
+I spent the rest of the day creating the HTML, CSS and Javascript shell for the game so that I could then move on to the Javascript element and start creating the grid. The grid was created in javascript and each cell of the grid was given an 'id' which the majority of the code would then be based upon.
+
+Below is a snippet of the code I created to first set up the grid variables and then create the grid:
+
+<img width="379" alt="Screenshot 2021-11-07 at 17 27 56" src="https://user-images.githubusercontent.com/88886169/140655219-a0ccf98b-17c3-4614-a68a-90b7138cf53b.png">
+
+<img width="379" alt="Screenshot 2021-11-07 at 17 28 42" src="https://user-images.githubusercontent.com/88886169/140655233-96975317-1a80-4a85-bce8-c48170df6686.png">
+
+
+### Day Two and Three:
+
+
+
+
 
 
 
