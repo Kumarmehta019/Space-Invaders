@@ -87,7 +87,7 @@ I spent the second and third day writing the logic for getting the aliens on the
 
 <img width="1046" alt="Screenshot 2021-10-09 at 21 53 59" src="https://user-images.githubusercontent.com/88886169/140655841-ecf79378-ae5d-4624-a8cd-9a78f5ee161f.png">
 
-I then spent the rest of the day writing a function to move the spaceship left and right along the grid using the keydown event listener. I didnt have must trouble coding this element of the game and was really pleased when I was able to see the shapceship move along the grid.
+I then spent the rest of the day writing a function to move the spaceship left and right along the grid using the keydown event listener. I didnt have must trouble coding this element of the game and was really pleased when I was able to see the spaceship move along the grid.
 
 
 ### Day Four and Five:
@@ -97,11 +97,29 @@ With the guidance of the course tutors and conversations with fellow students I 
 
 I spent the rest of the time amending my spaceships movement function to excorporate a fire function to make the red laser beam move up the grid based on the current position of the spaceship. 
 
+Below is the snippet of code for the alien movement and the spaceship movement and fire functions:
+
+<img width="762" alt="Screenshot 2021-11-07 at 17 59 46" src="https://user-images.githubusercontent.com/88886169/140656257-96a1c1c3-68b6-43fe-bea1-068ff89818b5.png">
+
+<img width="762" alt="Screenshot 2021-11-07 at 18 00 24" src="https://user-images.githubusercontent.com/88886169/140656278-a899f235-d1b9-498a-ab3b-1c383a9a2e8e.png">
+
+### Day Six and Seven:
+
+I spent day six and seven to add more functionality to my game and to work on my CSS and animation to make the game more user friendly and appealing. I was able to use set interval to make the laser beam from the spaceship move up towards the moving aliens and then write an if statement to detect if the red laser beams position in the cell on the grid also contained a pink alien, if it did then the pink alien and the red laser beam would be removed and an explosion sound would play (through the use of an alien hit function I wrote) and the quick addition and removal of an explosion image. Within the same code, I was able to update the score. 
+
+I hit a brick wall trying to implement a random laser shooting out of the aliens on the bottom line of the alien group and with the time remaining being short I decided to spend the rest of my time adding CSS and animation to the game. I also spent time creating the different pages (introduction page, game win and game over pages) and implement more sounds to the game.
+
+Below is a screen recoding of some of the features mentioned above:
 
 https://user-images.githubusercontent.com/88886169/140653621-d287d96c-824b-4dbb-9ed7-62f66f16e938.mp4
 
 
+## 5. Bugs
 
+- On the final day I noticed that if you fire the laserbeam too quickly (repetitively) then the explosion image where the laser beam is in the same cell as the pink alien remains in the cell and doesnt remove itself, furthermore any subsequent alien hits then also remain on the cells. I would need to do more research into why this bug is appearing and fix it. 
+- Sometimes the second time you try and play the game another batch of aliens show up on the grid, but this isnt often. This may have something to do with how the game starts.
+
+## 6. Wins and Challenges
 
 
 
