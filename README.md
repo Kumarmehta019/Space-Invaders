@@ -27,7 +27,7 @@ I wanted to create a similar game but sought to modernise it by using better ima
 
 
 ### Resources:
-> If you dont know what space invaders is, then the following links will help you understand the game better:
+> If you don't know what space invaders is, then the following links will help you understand the game better:
 > 1. [Space Invaders 1978 - Arcade Gameplay - Youtube](https://www.youtube.com/watch?v=MU4psw3ccUI)
 > 2. [Space Invaders - Wikipedia](https://en.wikipedia.org/wiki/Space_Invaders)
 
@@ -56,7 +56,7 @@ I wanted to create a similar game but sought to modernise it by using better ima
 
 ### Day One:
 
-The first day was spent planning the game by pseudo coding the MVP level. I then started creating the wire frame and mock up designs of the game using Fisma. This was also the first time I was using Fisma so I took some time to go through a few tutorials on how to use Fisma. THis was a great learning experience for me and I was able to create a rough design of how I wanted the game to look. Below are a few images of my Fisma designs:
+The first day was spent planning the game by pseudo coding the MVP level. I then started creating the wireframe and mock up designs of the game using Fisma. This was also the first time I was using Fisma so I took some time to go through a few tutorials on how to use Fisma. THis was a great learning experience for me and I was able to create a rough design of how I wanted the game to look. Below are a few images of my Fisma designs:
 
 <img width="490" alt="Screenshot 2021-10-07 at 22 24 06" src="https://user-images.githubusercontent.com/88886169/140654792-c79806be-da82-4664-bdcc-a5294ed31e00.png">
 
@@ -79,7 +79,7 @@ Below is a snippet of the code I created to first set up the grid variables and 
 
 ### Day Two and Three:
 
-I spent the second and third day writing the logic for getting the aliens on the grid as well as the spaceship. Whilst getting a single spaceship on the grid wasnt hard, I was having difficulty adding different alien background images to each of the divs that were created in Javascript. When I hit this roadblock, I had to go away and do some research on how add the aliens to different positions. Through my research I was able to understand that I needed to create a variable with an array of starting positions for the aliens and then use a .forEach() method to place each individual alien into the cells variable. Below is a snippet of the code that I used:
+I spent the second and third day writing the logic for getting the aliens on the grid as well as the spaceship. Whilst getting a single spaceship on the grid wasn't hard, I was having difficulty adding different alien background images to each of the divs that were created in Javascript. When I hit this roadblock, I had to go away and do some research on how to add the aliens to different positions. Through my research I was able to understand that I needed to create a variable with an array of starting positions for the aliens and then use a .forEach() method to place each individual alien into the cell's variable. Below is a snippet of the code that I used:
 
 <img width="844" alt="Screenshot 2021-10-09 at 21 54 45" src="https://user-images.githubusercontent.com/88886169/140655812-86628711-c109-47a4-b279-7d9d61246a39.png">
 
@@ -87,15 +87,16 @@ I spent the second and third day writing the logic for getting the aliens on the
 
 <img width="1046" alt="Screenshot 2021-10-09 at 21 53 59" src="https://user-images.githubusercontent.com/88886169/140655841-ecf79378-ae5d-4624-a8cd-9a78f5ee161f.png">
 
-I then spent the rest of the day writing a function to move the spaceship left and right along the grid using the keydown event listener. I didnt have must trouble coding this element of the game and was really pleased when I was able to see the spaceship move along the grid.
+I then spent the rest of the day writing a function to move the spaceship left and right along the grid using the keydown event listener. I didn't have much trouble coding this element of the game and was really pleased when I was able to see the spaceship move along the grid.
 
 
 ### Day Four and Five:
-I spent day four and five trying to make the spaceship fire a laser beam and also make the aliens move along the grid and fall down once they reached the edge of the grid. This was the toughest part of the project. I was able to make the aliens to move right and go down the grid but couldnt make the aliens then move left after they went down once on the grid. I also couldnt target the blue of the green aliens to move with the pink aliens. It was at this point that I decided to simplify my code and I decided to not create different types of aliens and to just create one type of alien (pink one). I was of the view that I could always add the other type of aliens at a later time as a bonus feature. 
+
+I spent day four and five trying to make the spaceship fire a laser beam and also make the aliens move along the grid and fall down once they reached the edge of the grid. This was the toughest part of the project. I was able to make the aliens move right and go down the grid but couldn't make the aliens move left after they went down once on the grid. I also couldn't target the blue of the green aliens to move with the pink aliens. It was at this point that I decided to simplify my code and I decided to not create different types of aliens and to just create one type of alien (pink one). I was of the view that I could always add the other type of aliens at a later time as a bonus feature. 
 
 With the guidance of the course tutors and conversations with fellow students I was able to create a nested if and else statement which made the pink aliens move right, left and down. I was really pleased that I was able to make the aliens change direction when they went down a level, the game was coming along nicely. 
 
-I spent the rest of the time amending my spaceships movement function to excorporate a fire function to make the red laser beam move up the grid based on the current position of the spaceship. 
+I spent the rest of the time amending my spaceship's movement function to excorporate a fire function to make the red laser beam move up the grid based on the current position of the spaceship. 
 
 Below is the snippet of code for the alien movement and the spaceship movement and fire functions:
 
@@ -107,22 +108,22 @@ Below is the snippet of code for the alien movement and the spaceship movement a
 
 I spent day six and seven to add more functionality to my game and to work on my CSS and animation to make the game more user friendly and appealing. I was able to use set interval to make the laser beam from the spaceship move up towards the moving aliens and then write an if statement to detect if the red laser beams position in the cell on the grid also contained a pink alien, if it did then the pink alien and the red laser beam would be removed and an explosion sound would play (through the use of an alien hit function I wrote) and the quick addition and removal of an explosion image. Within the same code, I was able to update the score. 
 
-I hit a brick wall trying to implement a random laser shooting out of the aliens on the bottom line of the alien group and with the time remaining being short I decided to spend the rest of my time adding CSS and animation to the game. I also spent time creating the different pages (introduction page, game win and game over pages) and implement more sounds to the game.
+I hit a brick wall trying to implement a random laser shooting out of the aliens on the bottom line of the alien group and with the time remaining being short I decided to spend the rest of my time adding CSS and animation to the game. I also spent time creating the different pages (introduction page, game win and game over pages) and implementing more sounds to the game.
 
-Below is a screen recoding of some of the features mentioned above:
+Below is a screen recording of some of the features mentioned above:
 
 https://user-images.githubusercontent.com/88886169/140653621-d287d96c-824b-4dbb-9ed7-62f66f16e938.mp4
 
 
 ## 5. Bugs
 
-- On the final day I noticed that if you fire the laserbeam too quickly (repetitively) then the explosion image where the laser beam is in the same cell as the pink alien remains in the cell and doesnt remove itself, furthermore any subsequent alien hits then also remain on the cells. I would need to do more research into why this bug is appearing and fix it. 
-- Sometimes the second time you try and play the game another batch of aliens show up on the grid, but this isnt often. This may have something to do with how the game starts.
+- On the final day I noticed that if you fire the laser beam too quickly (repetitively) then the explosion image where the laser beam is in the same cell as the pink alien remains in the cell and doesn't remove itself, furthermore any subsequent alien hits then also remain on the cells. I would need to do more research into why this bug is appearing and fix it. 
+- Sometimes the second time you try to play the game another batch of aliens show up on the grid, but this isn't often. This may have something to do with how the game starts.
 
 ## 6. Wins and Challenges
 
 ### Wins:
-- The biggest win for me is being able to proudly showcase this game, especially from a career changer who hasnt coded much using Javascript. 
+- The biggest win for me is being able to proudly showcase this game, especially from a career changer who hasn't coded much using Javascript. 
 - The alien movement was a really big win for me, especially as I really struggled with this feature of the game. I am proud that I was able to not give up in the face of such a challenge and take regular breaks and also move on to doing other parts of the game and then come back to the problem with fresh ideas to tackle the problem.
 - I was able to implement animation and music to the game which really made the game user friendly.
 
@@ -131,19 +132,21 @@ https://user-images.githubusercontent.com/88886169/140653621-d287d96c-824b-4dbb-
 - Getting random laser beams to fire from the aliens on the bottom row of the group of aliens was a real challenge.
 
 ## 7. Future Improvements
-- Fix the bugs mentioned above
-- Make random laser beams fire from the bottom row of aliens
-- Add different types of aliens
-- Store the players score in local storage to implement `High Score` feature
-- Make the player lose lives when alien laser beam hits the spaceship
-- Make a second wave of aliens after the first wave has been beaten by the player
+
+- Fix the bugs mentioned above.
+- Make random laser beams fire from the bottom row of aliens.
+- Add different types of aliens.
+- Store the player's score in local storage to implement the `High Score` feature.
+- Make the player lose lives when an alien laser beam hits the spaceship.
+- Make a second wave of aliens after the first wave has been beaten by the player.
 
 ## 8. Key Learnings
-- This project has helped me to solidify my understanding of Javascript fundamentals
-- Knowing when to leave a problem and move to another section of the project, and then come back to it with a fresh pair of eyes
-- Learning how to use Fisma to create basic frame work/designs
-- Using console logs to debug parts of the code which dont work
-- Keeping the mindset to create a simple game and trying not to over-complicate things has helped me iron out small bugs and create a user friendly fun game
+
+- This project has helped me to solidify my understanding of Javascript fundamentals.
+- Knowing when to leave a problem and move to another section of the project, and then come back to it with a fresh pair of eyes.
+- Learning how to use Fisma to create basic frameworks/designs.
+- Using console logs to debug parts of the code which don't work.
+- Keeping the mindset to create a simple game and trying not to over-complicate things has helped me iron out small bugs and create a user-friendly fun game.
 
 
 
