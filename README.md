@@ -11,7 +11,7 @@
 |    5     | **`Bugs`**|
 |    6     | **`Wins and Challenges`**|
 |    7     | **`Future Improvements`**|
-|    8     | **`Key Learning`**|
+|    8     | **`Key Learnings`**|
 
 
  ## 1. Project Overview
