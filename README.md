@@ -25,7 +25,7 @@ I wanted to create a similar game but sought to modernise it by using better ima
 ![Space Invaders Title Screen!](https://user-images.githubusercontent.com/88886169/140651552-c1fc7c0c-1fc6-4638-b199-e25aaa1db8da.png)
 ![Space Invaders Game Play Screen!](https://user-images.githubusercontent.com/88886169/140651677-88acc158-1507-4d3f-a208-fbf38d7cc724.png)
 
-#### Play the full game here: [*👾👾👾CLICK ME!👾👾👾*](https://kumarmehta019.github.io/SEI-Project-1/)
+#### Play the full game here: [*👾👾👾CLICK ME!👾👾👾*](https://kumarmehta019.github.io/Space-Invaders/)
 
 
 ### Resources:
