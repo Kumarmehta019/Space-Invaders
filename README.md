@@ -1,3 +1,5 @@
+### README progress... ![95%](https://progress-bar.dev/95)
+
 # SEI Project One- Space Invaders! 👾
 
 ## Table of Contents:
