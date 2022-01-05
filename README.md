@@ -146,7 +146,7 @@ https://user-images.githubusercontent.com/88886169/140653621-d287d96c-824b-4dbb-
 
 - This project has helped me to solidify my understanding of Javascript fundamentals.
 - Knowing when to leave a problem and move to another section of the project, and then come back to it with a fresh pair of eyes.
-- Learning how to use Fisma to create basic frameworks/designs.
+- Learning how to use Figma to create basic frameworks/designs.
 - Using console logs to debug parts of the code which don't work.
 - Keeping the mindset to create a simple game and trying not to over-complicate things has helped me iron out small bugs and create a user-friendly fun game.
 
