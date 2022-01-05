@@ -51,7 +51,7 @@ I wanted to create a similar game but sought to modernise it by using better ima
 - Git
 - GitHub
 - Google Fonts
-- Fisma- wire frame
+- Figma- wire frame
 
 
 ## 4. Project Timeline- 7 Days
