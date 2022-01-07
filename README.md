@@ -36,29 +36,29 @@ I wanted to create a similar game but sought to modernise it by using better ima
 
 ## 2. Project Brief and Technical Requirements
 
-- Build a grid based game in the browser
-- The player should be able to clear at least one wave of aliens
-- The player's score should be displayed at the end of the game
-- Create a responsive design
-- Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles
-- Do not use HTML Canvas
+- Build a grid based game in the browser.
+- The player should be able to clear at least one wave of aliens.
+- The player's score should be displayed at the end of the game.
+- Create a responsive design.
+- Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles.
+- Do not use HTML Canvas.
 
 ## 3. Technologies Used
 
-- Javascript ES6
-- CSS with Animation
-- HTML5
-- Git
-- GitHub
-- Google Fonts
-- Figma- wire frame
+- JavaScript.
+- CSS with animation.
+- HTML.
+- Git.
+- GitHub.
+- Google Fonts.
+- Figma- wireframe.
 
 
 ## 4. Project Timeline- 7 Days
 
 ### Day One:
 
-The first day was spent planning the game by pseudo coding the MVP level. I then started creating the wireframe and mock up designs of the game using Fisma. This was also the first time I was using Fisma so I took some time to go through a few tutorials on how to use Fisma. THis was a great learning experience for me and I was able to create a rough design of how I wanted the game to look. Below are a few images of my Fisma designs:
+The first day was spent planning the game by pseudo coding the MVP level. I then started creating the wireframe and mock up designs of the game using Figma. This was also the first time I was using Figma so I took some time to go through a few tutorials on how to use Figma. This was a great learning experience for me and I was able to create a rough design of how I wanted the game to look. Below are a few images of my Figma designs:
 
 <img width="490" alt="Screenshot 2021-10-07 at 22 24 06" src="https://user-images.githubusercontent.com/88886169/140654792-c79806be-da82-4664-bdcc-a5294ed31e00.png">
 
@@ -70,7 +70,7 @@ The first day was spent planning the game by pseudo coding the MVP level. I then
 
 During the process of designing the game, I used the time to acquire images, sounds and fonts I wanted to use for the game. This was a real time saver, especially when the project moved closer to deadline day.
 
-I spent the rest of the day creating the HTML, CSS and Javascript shell for the game so that I could then move on to the Javascript element and start creating the grid. The grid was created in javascript and each cell of the grid was given an 'id' which the majority of the code would then be based upon.
+I spent the rest of the day creating the HTML, CSS and JavaScript shell for the game so that I could then move on to the JavaScript element and start creating the grid. The grid was created in JavaScript and each cell of the grid was given an 'id' which the majority of the code would then be based upon.
 
 Below is a snippet of the code I created to first set up the grid variables and then create the grid:
 
@@ -81,7 +81,7 @@ Below is a snippet of the code I created to first set up the grid variables and 
 
 ### Day Two and Three:
 
-I spent the second and third day writing the logic for getting the aliens on the grid as well as the spaceship. Whilst getting a single spaceship on the grid wasn't hard, I was having difficulty adding different alien background images to each of the divs that were created in Javascript. When I hit this roadblock, I had to go away and do some research on how to add the aliens to different positions. Through my research I was able to understand that I needed to create a variable with an array of starting positions for the aliens and then use a .forEach() method to place each individual alien into the cell's variable. Below is a snippet of the code that I used:
+I spent the second and third day writing the logic for getting the aliens on the grid as well as the spaceship. Whilst getting a single spaceship on the grid wasn't hard, I was having difficulty adding different alien background images to each of the divs that were created in JavaScript. When I hit this roadblock, I had to go away and do some research on how to add the aliens to different positions. Through my research I was able to understand that I needed to create a variable with an array of starting positions for the aliens and then use a .forEach() method to place each individual alien into the cell's variable. Below is a snippet of the code that I used:
 
 <img width="844" alt="Screenshot 2021-10-09 at 21 54 45" src="https://user-images.githubusercontent.com/88886169/140655812-86628711-c109-47a4-b279-7d9d61246a39.png">
 
@@ -125,7 +125,7 @@ https://user-images.githubusercontent.com/88886169/140653621-d287d96c-824b-4dbb-
 ## 6. Wins and Challenges
 
 ### Wins:
-- The biggest win for me is being able to proudly showcase this game, especially from a career changer who hasn't coded much using Javascript. 
+- The biggest win for me is being able to proudly showcase this game, especially from a career changer who hasn't coded much using JavaScript. 
 - The alien movement was a really big win for me, especially as I really struggled with this feature of the game. I am proud that I was able to not give up in the face of such a challenge and take regular breaks and also move on to doing other parts of the game and then come back to the problem with fresh ideas to tackle the problem.
 - I was able to implement animation and music to the game which really made the game user friendly.
 
@@ -144,7 +144,7 @@ https://user-images.githubusercontent.com/88886169/140653621-d287d96c-824b-4dbb-
 
 ## 8. Key Learnings
 
-- This project has helped me to solidify my understanding of Javascript fundamentals.
+- This project has helped me to solidify my understanding of JavaScript fundamentals.
 - Knowing when to leave a problem and move to another section of the project, and then come back to it with a fresh pair of eyes.
 - Learning how to use Figma to create basic frameworks/designs.
 - Using console logs to debug parts of the code which don't work.
