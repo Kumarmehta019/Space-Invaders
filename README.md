@@ -125,7 +125,7 @@ https://user-images.githubusercontent.com/88886169/140653621-d287d96c-824b-4dbb-
 ## 6. Wins and Challenges
 
 ### Wins:
-- The biggest win for me is being able to proudly showcase this game, especially from a career changer who hasn't coded much using JavaScript. 
+- The biggest win for me is being able to proudly showcase this game, especially from a career changer who hasn't coded much using JavaScript or created wireframes. 
 - The alien movement was a really big win for me, especially as I really struggled with this feature of the game. I am proud that I was able to not give up in the face of such a challenge and take regular breaks and also move on to doing other parts of the game and then come back to the problem with fresh ideas to tackle the problem.
 - I was able to implement animation and music to the game which really made the game user friendly.
 
